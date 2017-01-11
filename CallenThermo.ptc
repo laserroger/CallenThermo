@@ -1,0 +1,40 @@
+\select@language {english}
+\contentsline {paragraph}{第四次重印前言}{5}{section*.2}
+\contentsline {part}{\@mypartnumtocformat {I}{经典热力学基本原理}}{1}{part.1}
+\ttl@starttoc {default@1}
+\contentsline {chapter}{\numberline {1}热力学基本问题与假设}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}宏观测量的时间性质}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}宏观测量的空间性质}{6}{section.1.2}
+\contentsline {section}{\numberline {1.3}热力学系统的组成}{8}{section.1.3}
+\contentsline {section}{\numberline {1.4}内能}{9}{section.1.4}
+\contentsline {section}{\numberline {1.5}热力学平衡态}{10}{section.1.5}
+\contentsline {paragraph}{假设 \uppercase {i}.}{10}{section*.7}
+\contentsline {paragraph}{Postulate \uppercase {i}.}{10}{section*.8}
+\contentsline {section}{\numberline {1.6}壁与限制}{11}{section.1.6}
+\contentsline {section}{\numberline {1.7}能量的可测量性}{12}{section.1.7}
+\contentsline {section}{\numberline {1.8}热的定量定义}{13}{section.1.8}
+\contentsline {section}{\numberline {1.9}热力学基本问题}{22}{section.1.9}
+\contentsline {section}{\numberline {1.10}最大熵假设}{23}{section.1.10}
+\contentsline {chapter}{\numberline {2}平衡条件}{29}{chapter.2}
+\contentsline {section}{\numberline {2.1}强度量}{29}{section.2.1}
+\contentsline {section}{\numberline {2.2}状态方程}{31}{section.2.2}
+\contentsline {section}{\numberline {2.3}熵表象下的强度量}{34}{section.2.3}
+\contentsline {section}{\numberline {2.4}热平衡态——温度}{36}{section.2.4}
+\contentsline {section}{\numberline {2.5}温度定义与直观概念的一致性}{38}{section.2.5}
+\contentsline {section}{\numberline {2.6}温度单位}{38}{section.2.6}
+\contentsline {section}{\numberline {2.7}力学平衡}{40}{section.2.7}
+\contentsline {section}{\numberline {2.8}存在物质交换时的平衡态}{43}{section.2.8}
+\contentsline {section}{\numberline {2.9}化学平衡}{44}{section.2.9}
+\contentsline {chapter}{\numberline {3}形式关系与样例系统}{47}{chapter.3}
+\contentsline {section}{\numberline {3.1}热力学Euler方程}{47}{section.3.1}
+\contentsline {section}{\numberline {3.2}Gibbs-Duhem关系}{48}{section.3.2}
+\contentsline {section}{\numberline {3.3}形式关系总结}{50}{section.3.3}
+\contentsline {section}{\numberline {3.4}单组分/多组分简单理想气体}{51}{section.3.4}
+\contentsline {section}{\numberline {3.5}理想van der Waals流体}{51}{section.3.5}
+\contentsline {section}{\numberline {3.6}黑体辐射系统}{51}{section.3.6}
+\contentsline {section}{\numberline {3.7}橡胶带系统}{51}{section.3.7}
+\contentsline {section}{\numberline {3.8}不可控变量；磁系统}{51}{section.3.8}
+\contentsline {section}{\numberline {3.9}摩尔热容与其他导出量}{51}{section.3.9}
+\contentsline {chapter}{\numberline {4}可逆过程和最大功定理}{53}{chapter.4}
+\contentsline {section}{\numberline {4.1}可能和不可能的过程}{53}{section.4.1}
+\contentsfinish 

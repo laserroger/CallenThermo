@@ -1,5 +1,4 @@
 \select@language {english}
-\contentsline {paragraph}{第四次重印前言}{5}{section*.2}
 \contentsline {part}{\@mypartnumtocformat {I}{经典热力学基本原理}}{1}{part.1}
 \ttl@starttoc {default@1}
 \contentsline {chapter}{\numberline {1}热力学基本问题与假设}{5}{chapter.1}
@@ -29,13 +28,13 @@
 \contentsline {section}{\numberline {3.1}热力学Euler方程}{47}{section.3.1}
 \contentsline {section}{\numberline {3.2}Gibbs-Duhem关系}{48}{section.3.2}
 \contentsline {section}{\numberline {3.3}形式关系总结}{50}{section.3.3}
-\contentsline {section}{\numberline {3.4}单组分/多组分简单理想气体}{51}{section.3.4}
-\contentsline {section}{\numberline {3.5}理想van der Waals流体}{51}{section.3.5}
-\contentsline {section}{\numberline {3.6}黑体辐射系统}{51}{section.3.6}
-\contentsline {section}{\numberline {3.7}橡胶带系统}{51}{section.3.7}
-\contentsline {section}{\numberline {3.8}不可控变量；磁系统}{51}{section.3.8}
-\contentsline {section}{\numberline {3.9}摩尔热容与其他导出量}{51}{section.3.9}
-\contentsline {chapter}{\numberline {4}可逆过程和最大功定理}{53}{chapter.4}
-\contentsline {section}{\numberline {4.1}可能和不可能的过程}{53}{section.4.1}
-\contentsline {section}{\numberline {4.2}准静态和绝热过程}{56}{section.4.2}
+\contentsline {section}{\numberline {3.4}单组分/多组分简单理想气体}{52}{section.3.4}
+\contentsline {section}{\numberline {3.5}理想van der Waals流体}{52}{section.3.5}
+\contentsline {section}{\numberline {3.6}黑体辐射系统}{55}{section.3.6}
+\contentsline {section}{\numberline {3.7}橡胶带系统}{55}{section.3.7}
+\contentsline {section}{\numberline {3.8}不可控变量；磁系统}{55}{section.3.8}
+\contentsline {section}{\numberline {3.9}摩尔热容与其他导出量}{55}{section.3.9}
+\contentsline {chapter}{\numberline {4}可逆过程和最大功定理}{57}{chapter.4}
+\contentsline {section}{\numberline {4.1}可能和不可能的过程}{57}{section.4.1}
+\contentsline {section}{\numberline {4.2}准静态和绝热过程}{60}{section.4.2}
 \contentsfinish 

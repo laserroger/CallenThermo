@@ -208,6 +208,115 @@ an informational content.} }\mpar{informational content怎么翻……} $U = U(S
 \section{单组分/多组分简单理想气体}
 \label{sec3.4}
 
+单一组分简单理想气体可以用两个方程来描述：
+\begin{align}
+PV=NRT \label{equ3.25}\\
+U=cNRT \label{equ3.26}
+\end{align}
+其中$c$是常值，$R$是一个普适的气体常数——热力学常数($R=N_Ak_B=8.3144\ \text{J/mole K}$).
+
+上面的是比较理想化的方程。在现实世界中，人们发现，单原子气体(比如Ar、He)有可能符合方程\eqref{equ3.25}\eqref{equ3.26}，如果其温度和压力再满足一定要求的话，具体而言，就是$k_BT$相较于电子激发能而言很小(比如当$T\lesssim 10^4\ K$)而且压强相对较低，那么该气体就会符合上面的两个方程.此外，对所有的这种单原子气体都有$c=\frac{3}{2}$.
+
+在一些更苛刻的条件下，其他的真实气体也有可能满足简单理想气体方程\eqref{equ3.25}\eqref{equ3.26}，但是其$c$有可能不再是$3\over2$. 举个例子，双原子气体(比如NO、O$_2$)的$c$在一个很大的温度范围内约为${5\over2}$，在更高的温度下其$c$约为$7\over2$(两种情况的分界温度数量级一般在$10^3K$)。
+
+通过方程\eqref{equ3.25}\eqref{equ3.26}可以确定基本方程. 方程\eqref{equ3.26}中内能$U$的形式很简单，这就启示我们：在熵表象下处理问题可能会更简单。将方程重写为合适的形式：
+\begin{align}
+\frac{1}{T}=cR(\frac{N}{U}=\frac{cR}{u})\label{equ3.27}\\
+\frac{P}{T}=R(\frac{N}{V}=\frac{R}{v})\label{equ3.28}
+\end{align}
+
+如果将这两个熵状态方程代入Gibbs-Duhem关系式并积分，我们应该能得到第三个状态方程
+\begin{equation}
+\label{equ3.29}
+\frac{\mu}{T}=u,v\text{的函数}
+\end{equation}
+Gibbs-Duhem关系式是：
+\begin{equation}
+\label{equ3.30}
+\text{d}(\frac{\mu}{T})=u\text{d}(\frac{1}{T})+v\text{d}(\frac{P}{T})
+\end{equation}
+最后这三个状态方程会被代入Euler方程,Euler方程为:
+\begin{equation}
+\label{equ3.31}
+S=(\frac{1}{T})U+(\frac{P}{T})V-\frac{\mu}{T}N
+\end{equation}
+
+现在我们来实打实地干一番：将\eqref{equ3.25}\eqref{equ3.26}代入Gibbs-Duhem关系式可得：
+\begin{equation}
+\label{equ3.32}
+\text{d}(\frac{\mu}{T})=\mu\times(-\frac{cR}{u^2})\text{d}u+v\times(-\frac{R}{v^2})\text{d}v=-cR\frac{\text{d}u}{u}-R\frac{\text{d}v}{v}
+\end{equation}
+积分之后得
+\begin{equation}
+\label{equ3.33}
+\frac{\mu}{T}-(\frac{\mu}{T})_0=-cR\ln{\frac{u}{u_0}}-R\ln{\frac{v}{v_0}}
+\end{equation}
+其中$u_0,v_0$是一个固定的参考态，$(\frac{\mu}{T})_0$即随之产生的积分常数. 然后由Euler方程\eqref{equ3.31}可得
+\begin{equation}
+\label{equ3.34}
+S=Ns_0+NR\ln\left[\left(\frac{U}{U_0}\right)^c\left(\frac{V}{V_0}\right)\left(\frac{N}{N_0}\right)^{-(c+1)}\right]
+\end{equation}
+其中
+\begin{equation}
+\label{equ3.35}
+s_0=(c+1)R-\left(\frac{\mu}{T}\right)
+\end{equation}
+方程\eqref{equ3.34}就是要求的基本方程；如果积分常数$s_0$已知，那么方程\eqref{equ3.34}就包含了简单理想气体所有的热力学信息.
+
+这种方式并非唯一的求解办法，甚至也非最常用的. 更直接的办法是将下式(摩尔量方程 molar equation)积分
+\begin{equation}
+\label{equ3.36}
+\text{d}s=(\frac{1}{T})\text{d}u+(\frac{P}{T})\text{d}v
+\end{equation}
+再目前的问题中(目前我们所处理是理想气体)；它变为
+\begin{equation}
+\label{equ3.37}
+\text{d}s=c(\frac{R}{u})\text{d}u+(\frac{R}{v})\text{d}v
+\end{equation}
+积分后得
+\begin{equation}
+\label{equ3.38}
+s=s_0+cR\ln(\frac{u}{u_0})+R\ln(\frac{v}{v_0})
+\end{equation}
+这个方程与\eqref{equ3.34}等价.
+
+应当注意，方程\eqref{equ3.37}是逐项可积的，但我们在例3中会提到，这样的方法在更一般的情况下无法实现. 方程\eqref{equ3.37}中，独立变量$u,v$的分离是一种巧合，这完全是由理想气体方程的特殊性所致. 这种特殊性让我们能够对方程\eqref{equ3.37}逐项积分.
+
+两种或多种简单理想气体的混合物——“多组分简单理想气体”——可以由一个基本方程描述. 为了使方程的形式更加简单，我们可以将其写成参数形式，其中温度$T$扮演参数的角色.
+\begin{equation}
+\label{equ3.39}
+S=\sum_j N_js_{j0}+\left(\sum_j N_jc_j\right)R\ln\frac{T}{T_0}+\sum_j N_jR\ln\left(\frac{V}{N_jv_0}\right)
+U=\left(\sum_jN_jc_j\right)RT
+\end{equation}
+将$T$从这两个方程中消去，就得到一个具有标准形式$S=S(U,V,N_1,N_2,\cdots)$的方程.
+
+观察\eqref{equ3.39}中关于某一种理想气体的项,并与该气体单独存在时的熵表达式作比较，我们可以发现一个事实(通常被称作Gibbs定理)：理想气体混合物的熵是其中每一种气体在温度为$T$下、单独占据体积$V$时的熵之和. 这个定理对所有的理想气体都成立(见第13章).
+
+有趣的是，如果将方程\eqref{equ3.39}写成如下形式:
+\begin{equation}
+\label{equ3.40}
+S=\sum_jN_js_{j0}+\left(\sum_jN_jc_{j}\right)R\ln{\frac{T}{T_0}}+NR\ln{\frac{V}{Nv_0}}-R\sum_jN_j\ln{\frac{N_j}{N}}
+\end{equation}
+则最后一项可视作"混合熵".这一项代表了在同一温度和同一分子数密度($N/V=N_j/V_j$,因此压强也相同)下，诸多分开的单一组分气体的熵之和与混合气体的熵之间的差异，见问题3.4-15. 上面这种阐述与Gibbs定理之间既有相当的差别，也有相似之处，读者应当仔细分辨. 混合熵可应用在分离同位素的问题上，我们将在4.4节(例4)中进行阐述.
+
+一个简单的“思想实验”就能简洁地证明Gibbs定理. 某圆柱体(图3.2)体积为$2V_0$，用3个固隔板将其分成4个小室(分别用$\alpha,\beta,\gamma,\delta$来记)，其中一个隔板固定在圆柱中心，两个可滑动的隔板在中心两边. 两边的两个隔板被链在一起，以保证它们之间的距离恒为圆柱长的一半(因此$V_\alpha=V_\gamma, V_\beta=V_\delta$). 最开始，两个滑动隔板分别在圆柱左边和圆柱中心，因此$V_\alpha=V_\gamma=0$. 此时小室$\beta$体积为$V_0$，其中充有$N_0$  mole理想气体A和$N_0$ mole的理想气体B的混合物. 而且小室$\delta$是真空的，整个系统的温度为$T$.
+
+左边的滑动隔板可以任由气体A通过，但无法通过气体B，中间的固定隔板可任由气体B通过，但无法通过气体A，右边的滑动隔板两种气体都无法通过.
+
+然后，这两块链在一起的滑动隔板被向右准静态地推动，直至$V_\beta=V_\delta=0$且$V_\alpha=V_\gamma=V_0$. 此时小室$\alpha$中为纯的气体A，小室$\gamma$中为纯气体B. 最开始体积为$V_0$的混合物被分成了两种纯气体，每种纯气体的体积都为$V_0$. 假如Gibbs定理成立，则系统终态的熵应该等于最开始的熵，接下来可以看到，上面的思想实验证实了这个论断.
+
+需要指出，\eqref{equ3.39}中的第二个方程说明能量仅是温度$T$与mole数的函数，这就确保系统终态的能量等于始态的能量. 因此$-T\Delta S$等于移动两个链在一起的滑动隔板所做的功.
+
+气体A可以自由通过左边的隔板，因此在准静态过程中，小室$\alpha$中的A气体与小室$\beta$中的A气体达到平衡，二平衡条件是$\mu_{A,\alpha}=\mu_{A,\beta}$. 小室$\beta$和小室$\gamma$中的B气体也有类似的关系.习题3.4-14会证明由$\mu_{A,\alpha}=\mu_{A,\beta}$和$\mu_{B,\beta}=\mu_{B,\gamma}$可以推出
+\begin{equation}
+P_\alpha=P_\gamma \qquad P_\beta=2P_\alpha
+\end{equation}
+这就是说，作用在相链结的两块滑动板上的总压力$P_\alpha-P_\beta+\Phi_\gamma$(当然应该乘上作用面积S，不过在这里，两边的S都相等)为0. 因此移动滑板不需要做功，所以该过程中就没有熵变. 最开始体积为$V_0$的A、B混合物之熵，与纯体积都为$V_0$的纯气体A、B的熵是相等的. 这就是Gibbs定理.
+
+最后，需要指出，本节中所考虑的简单理想气体是一般气体的一种特殊情况，现实中，很多气体在压强很小或适中的情况下都可以视作简单理想气体. 与简单理想气体相同，一般理想气体的(力学)状态方程也是$PV=NRT$，其内能也是温度的函数，但不再是线性的了. 一般的理想气体会在第13章中讨论，而利用统计力学推导基本方程的方法会现身于第16章.
+
+\subsection*{习题}
+
 \section{理想van der Waals流体}
 \label{sec3.5}
 三次元世界的气体不太符合理想气体方程，除非在密度极低的情况下。1873年，J. D. van der Waals提出了对理想气体力学状态方程\eqref{equ3.28}式的改进：

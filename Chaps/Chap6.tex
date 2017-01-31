@@ -1,0 +1,76 @@
+\chapter{Legender变换表象中的极值原理}
+\label{chap6}
+
+\section{Helmholtz势}
+\label{sec6.2}
+
+对于一个与热库有热接触的复合系统，其平衡态使得等温态（与热库的温度相等）流形上的Helmholtz势最小。
+事实上很多过程都在有着透热壁的刚性容器中发生，比方说环境大气可以视为一个热库，对于这些情况Helmholtz势表象是相当合适的。\mpar{原文：{In practice many processes are carried out in rigid vessels with diathermal walls, so that the ambient atmosphere acts as a thermal reservoir; for these the Helmholtz potential representation is admirably suited.}}
+
+ Helmholtz势函数是以$T$,$V$,$N_1$,$N_2$,…为自变量的自然函数(natural function)。
+$T$为常数的条件减少了这个问题中变量的数量，使得$F$成为一个只与变量$V$,$N_1$,$N_2$,…有关的函数。
+这与$T$的固定在能量表象中体现出的行为形成了鲜明的对比。具体来说，在能量表象中$U$是$S$,$V$,$N_1$,$N_2$,…的函数，但附加条件$T=T^r$暗示着这些变量间的一个关系。
+特别地，在对状态方程$T=T(S, V, N)$的具体形式一无所知的情况下，这个附加的限制将导致能量表象中的解析过程无从下手。
+
+作为Helmholtz势用途的一个例证我们先考虑一个复合系统，这个复合系统由两个被一个可移动的、绝热的、不可透过的壁（例如一个刚性绝热活塞）隔开的简单系统组成。
+这两个子系统每一个都与温度$T^r$的热库之间有热接触。
+问题是预测两个子系统的体积$V^{(1)}$和$V^{(2)}$。
+我们有
+\begin{equation}
+\label{equ6.23}
+P^{(1)}\left(T^r, V^{(1)}, N_1^{(1)}, N_2^{(1)}, ...\right)=P^{(2)}\left(T^r, V^{(2)}, N_1^{(2)}, N_2^{(2)}, ...\right)
+\end{equation}
+这是一个包含两个变量$V^{(1)}$和$V^{(2)}$的方程；所有其余量都是常数。封闭条件
+\begin{equation}
+\label{equ6.24}
+V^{(1)}+V^{(2)}=V
+\end{equation}
+提供了另一个需要的方程，使得$V^{(1)}$与$V^{(2)}$可以被明确解出。
+
+在能量表象中我们亦能发现压强相等，正如在方程$6.23$中那样，但此时压强是熵、体积、摩尔数的函数。
+我们将需要状态方程来把熵同温度与体积联系在一起；$6.23$与$6.24$两个同时存在的方程将变成$4$个。
+
+尽管这种从$4$个方程到$2$个的简化也许看起来仅仅是个微小的成功，在更加复杂的情形下这种简化将带来巨大的方便。
+也许关于这个概念的更加大价值是Helmholtz表象让我们将我们的思考过程没有干扰地集中在我们感兴趣的子系统上，与此同时只把热库视为一个隐含的角色。
+最后，由于数学技巧上的原因（这将在第$16$章中详细讲到），在Helmholtz表象下统计力学的计算将被巨大地简化，使得难以对付的计算成为可能。
+
+对于一个与热库有接触的系统，Helmholtz势可以被解释为一定温度下可获得的功。考虑一个与热库有热接触的系统，它与一个可逆功源(reversible work source)之间有相互作用。在一个可逆过程中给可逆功源(reversible work source)输入的功与系统减少的能量相等，并且
+\begin{align}
+\label{equ6.25}
+dW_{RWS}&=-dU-dU'=-dU-T^rdS^r \\
+\label{equ6.26}
+                  &=-dU+T^rdS=-d(U-T^rS) \\
+\label{equ6.27}
+                  &=-dF
+\end{align}
+因此在一个可逆过程中一个与热库有接触的系统所释放的能量与这个系统Helmholtz势减少的量相等。
+Helmholtz势经常被称作Helmholtz自由能，尽管短语“一定温度下可获得的功”更不容易被误解。
+
+\subsection*{例子1}
+一个圆筒内部包含一个活塞，活塞的每一侧都有一摩尔的单原子分子理想气体。
+圆筒的壁是透热的，整个系统浸入到一个温度在$0$摄氏度的大液浴（一个热库）中。
+这两个气体子系统（活塞的两边）的初始体积分别为$10$升和$1$升。
+活塞现在被可逆地移动，使得其两边最后的体积分别为$6$升和$5$升。
+问做了多少功？
+\subsubsection*{答案}
+正如在问题$5.3-1$中读者见到的那样，Helmholtz势表象中单原子分子理想气体的基本方程式为
+\begin{equation}
+\notag
+F=NRT\left\{\frac{F_0}{N_0RT_0}-ln\left[\left(\frac{T}{T_0}\right)^{3/2}\frac{V}{V_0}\left(\frac{N}{N_0}\right)\right]\right\}
+\end{equation}
+当$T$与$N$为常数时这意味着
+\begin{equation}
+\notag
+F=常数-NRTlnV
+\end{equation}
+Helmholtz势的变化为
+\begin{equation}
+\notag
+\Delta F=-NRT[ln6+ln5-ln10-ln1]=-NRTln3=-2.5kJ
+\end{equation}
+因此$2.5kJ$的功被用于这个过程。
+
+在这里注意到一件有趣的事情，所有的能量都来自于热库。
+单原子分子理想气体的能量仅仅是$\frac{3}{2}NRT$，因此它在一定的温度下是个常数。
+然而，我们从热库中吸取能量并将它作为注入到可逆功源的功的事实并不违反Carnot效率原理，因为气体子系统并不处在它们的初始态上。
+除了这些子系统的能量保持恒定的事实外，它们的熵增加了。

@@ -3,7 +3,7 @@
 \ttl@starttoc {default@1}
 \contentsline {chapter}{\numberline {1}热力学基本问题与假设}{5}{chapter.1}
 \contentsline {section}{\numberline {1.1}宏观测量的时间性质}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}宏观测量的空间性质}{6}{section.1.2}
+\contentsline {section}{\numberline {1.2}宏观测量的空间本质}{6}{section.1.2}
 \contentsline {section}{\numberline {1.3}热力学系统的组成}{8}{section.1.3}
 \contentsline {section}{\numberline {1.4}内能}{9}{section.1.4}
 \contentsline {section}{\numberline {1.5}热力学平衡态}{10}{section.1.5}
@@ -39,6 +39,9 @@
 \contentsline {section}{\numberline {4.2}准静态和绝热过程}{66}{section.4.2}
 \contentsline {section}{\numberline {4.3}弛豫时间和不可逆性}{70}{section.4.3}
 \contentsline {section}{\numberline {4.4}热流：耦合系统和逆过程}{71}{section.4.4}
-\contentsline {chapter}{\numberline {5}其它形式与勒让德变换}{75}{chapter.5}
-\contentsline {section}{\numberline {5.1}能量最小原理}{75}{section.5.1}
+\contentsline {section}{\numberline {4.5}热机、制冷机和热泵的工作功率}{73}{section.4.5}
+\contentsline {chapter}{\numberline {5}其它形式与勒让德变换}{77}{chapter.5}
+\contentsline {section}{\numberline {5.1}能量最小原理}{77}{section.5.1}
+\contentsline {chapter}{\numberline {6}Legendre变换表象中的极值原理}{83}{chapter.6}
+\contentsline {section}{\numberline {6.1}Helmholtz势}{83}{section.6.1}
 \contentsfinish 

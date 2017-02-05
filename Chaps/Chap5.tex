@@ -43,9 +43,9 @@
 
 总结一下，尽管我们尚未证明，但看起来以下两个原理是等价的：
 
-{\bf 熵最大原理。}{\it 在总的内部能量确定时，任何不受约束的参数在平衡时的取值都使得熵最大}。
+{\bf 熵最大原理.}{\it 在总的内部能量确定时，任何不受约束的参数在平衡时的取值都使得熵最大}。
 
-{\bf 能量最小原理。}{\it 在总的熵确定时，任何不受约束的参数在平衡时的取值都使得能量最小}。
+{\bf 能量最小原理.}{\it 在总的熵确定时，任何不受约束的参数在平衡时的取值都使得能量最小}。
 
 两个极值准则的等价性的证明即可以用物理论证的方式阐述，也可以用数学证明的方式阐述。
 我们首先考虑物理讨论，来论证如果能量{\it 不}是最小值的话那么熵就可以不是最大值，并且反之亦然。
@@ -56,7 +56,7 @@
 这跟初始的平衡态是熵最大的态是矛盾的！
 因此我们不得不推断最初的平衡态必须具有给定的熵下最小的能量。。
 
-相反的推论，也就是最小能量要求最大的熵，可以用类似的方式构造（见问题 5.1-1）.
+相反的推论，也就是最小能量要求最大的熵，可以用类似的方式构造（见问题 \ref{pro5.1-1}）.
 
 在更形式化的证明中，我们假设熵最大原理
 \begin{equation}
@@ -71,9 +71,7 @@
 
 \begin{equation}
 \label{equ5.2}
-P\equiv\left(\frac{\partial U}{\partial X}\right)_S
-=-\frac{\left(\frac{\partial S}{\partial X}\right)_U}{\left(\frac{\partial S}{\partial U}\right)_X}
-=-T\left(\frac{\partial S}{\partial X}\right)_U=0
+	P \equiv \left( \frac{\partial U}{\partial X} \right)_S = -\frac{\left( \frac{\partial S}{\partial X} \right)_U }{ \left( \frac{\partial S}{\partial U}\right)_X } = -T \left(\frac{\partial S}{\partial X}\right)_U = 0
 \end{equation}
 
 我们得到$U$是极值。
@@ -89,21 +87,25 @@ P\equiv\left(\frac{\partial U}{\partial X}\right)_S
 =\left(\frac{\partial P}{\partial U}\right)_XP
 +\left(\frac{\partial P}{\partial X}\right)_U
 \end{equation}
+
 \begin{equation}
 \label{equ5.4}
 =\left(\frac{\partial P}{\partial X}\right)_U.~\text{若}P=0
 \end{equation}
+
 \begin{equation}
 \label{equ5.5}
 =\frac{\partial}{\partial X}
 \left[-\frac{\left(\frac{\partial S}{\partial X}\right)_U}{\left(\frac{\partial S}{\partial U}\right)_X}\right]_U
 \end{equation}
+
 \begin{equation}
 \label{equ5.6}
 =-\frac{\frac{\partial^2S}{\partial X^2}}
 {\frac{\partial S}{\partial U}}+\frac{\partial S}{\partial X}
 \frac{\frac{\partial^2S}{\partial X\partial U}}{\left(\frac{\partial S}{\partial U}\right)^2}
 \end{equation}
+
 \begin{equation}
 \label{equ5.7}
 =-T\frac{\partial^2S}{\partial X^2}>0
@@ -177,5 +179,231 @@ T^{(1)}=T^{(2)}
 用完全一样的思路，可以发现一个内部带有可动绝热墙的封闭系统的平衡条件是压强相等。
 这个结论在能量表述中是非常直接的，但是如同在\ref{sec2.7}的最后一段看到的，在熵表述中相对更加微妙。
 
+\section{勒让德变换}
+\label{sec5.2}
 
+在能量表述和熵表述中，广延量都表现为数学上的独立变量，而强度量都看成被导出的物理量。
+这个情形跟实验室中更方便的实际情况中的需求形成了对比。
+实验者经常发现强度量更容易测量和控制，因此更喜欢把强度量当成操作上的独立变量而把广延量当成导出量。
+这个情形的极端情况体现在熵和温度这一对共轭变量上。
+并不存在可以测量和控制熵的实验仪器，而用来测量和控制温度的温度计和恒温器则是实验室中非常普通的仪器。
+随之而来的问题就是能否改变数学形式使得强度量代替广延量称为数学上的独立变量。
+我们会看到这种重新表述是可行的，而且还可以导出很多其它形式的热力学表述。
 
+或许此刻再次强调有些多余：不论是在熵表述还是能量表述下热力学都是逻辑完备且独立的，而介绍这些变换表述纯粹只是为了方便。
+这被公认为是一种使热力学避免了无用的尴尬的简化方法。但是理论上这仅仅是比较有趣而已，并不是逻辑上所必须的。
+
+接下来我们给出这个问题纯粹的形式表述。
+我们有一个形如
+\begin{equation}
+\label{equ5.13}
+  Y=Y(X_0,X_1,\ldots,X_l)
+\end{equation}
+的方程（基本关系），并且想找到一个将导数
+\begin{equation}
+\label{equ5.14}
+  P_k\equiv\frac{\partial Y}{\partial X_k}
+\end{equation}
+作为独立变量，但是不改变给出的基本关系\eqref{equ5.13}中任何其他信息的方法。
+形式上，在几何和其他一些物理领域中也有与之类似的问题。
+这个问题的解答需要采用名为勒让德变换的数学技术，如果给出它的几何表述的话会最为直观。
+在这一节中我们就会给出这个几何表述。
+
+简便起见，我们首先考虑基本关系使只关于一个独立变量$X$的函数的数学情形。
+\begin{equation}
+\label{equ5.15}
+  Y=Y(X)
+\end{equation}
+几何上，这个基本关系可以被表现为具有笛卡尔坐标$X$和$Y$的空间中的一条曲线（图\ref{fig5.3}），而导数
+\begin{equation}
+\label{equ5.16}
+  P\equiv\frac{\partial Y}{\partial X}
+\end{equation}
+是这个曲线的斜率。
+现在如果我们想用$P$代替$X$作为一个独立变量，我们的第一反应可能是简单地用方程\eqref{equ5.15}和\eqref{equ5.16}消去$X$，
+从而得到$Y$关于$P$的函数
+\begin{equation}
+\label{equ5.17}
+  Y=Y(P)
+\end{equation}
+从几何上来看，我们立刻会发现，这样做无论如何都会在数学上牺牲掉给出的基本关系\eqref{equ5.15}的一些信息。
+显然对于$Y$关于斜率$dY/dX$的函数的了解并不能让我们重构出曲线$Y=Y(X)$。
+实际上图\ref{fig5.4}中每一条替代的曲线都等价地满足关系$Y=Y(P)$。
+从分析的观点来看，关系$Y=Y(P)$是一个一阶微分方程，而它的积分给出的结果跟$Y=Y(X)$只差一个待定的积分常数。
+因此我们看到，如果用$Y=Y(P)$代替$Y=Y(X)$成为基本方程，就会导致丢失掉基本关系中的一些原始信息。
+尽管我们希望让$P$成为一个数学上的独立变量，但形式中包含的信息的丢失却是完全不可接受的。
+
+问题的实际的解是由传统的点几何与普吕克（Pluecker）线几何的对偶关系给出的。
+线几何中的基本概念是一条给定的曲线可以很好地由以下两种方式等价描述:
+(a) 作为一族切线的包络线（图\ref{fig5.5}）；
+(b) 作为满足关系$Y=Y(X)$的店的轨迹。
+任何可以使我们构造出一族切线的方程都能和关系$Y=Y(X)$一样好地决定一条曲线。
+
+正如平面上的每一个点都可以由两个数$X$和$Y$描述，平面上的每一条直线也都可以用两个数$P$和$\psi$描述,
+其中$P$是直线的斜率，$\psi$是它在$Y$轴上的截距。
+于是正如关系$Y=Y(X)$挑出了所有可能的点$(X,Y)$中的一个子集，
+关系$\psi=\psi(P)$挑出了所有可能的直线$(P,\psi)$的一个子集。
+关于切线的截距$\psi$作为斜率$P$的函数的知识可以让我们构造出一族切线，
+从而也就构造出了它们的包络线也就是这条曲线。
+因此关系
+\begin{equation}
+\label{equ5.18}
+  \psi=\psi(P)
+\end{equation}
+是跟基本关系$Y=Y(X)$完全等价的。
+在这个关系中，独立变量是$P$，于是方程\eqref{equ5.18}给出了对于这个问题的一个满足要求的完备的解。
+由于关系$\psi=\psi(P)$跟关系$Y=Y(X)$是数学等价的，所以它也可以被当成一个基本关系；
+$Y=Y(X)$是“$Y$表述”下的基本关系，而$\psi=\psi(P)$是“$\psi$表述”下的基本关系。
+
+在这里我们鼓励读者去画一些具有不同的斜率$P$和不同的$Y$截距$\psi=-P^2$的直线。
+这样我们就可以看出关系$\psi=-P^2$描述了一条抛物线（更加一般的描述是$Y=\frac{1}{4}X^2$）。
+在“$\psi$表述”下抛物线的基本方程是$\psi=-P^2$，而“$Y$表述”下同一条抛物线的基本方程是$Y=\frac{1}{4}X^2$）。
+
+现在面临的问题就是如果我们给出关系$Y=Y(X)$后如何计算出关系$\psi=\psi(P)$。
+恰当的数学操作被称为勒让德（Legendre）变换。
+我们考虑一条经过点$(X,Y)$斜率为$P$的切线。
+如果截距是$\psi$，我们有（见图\ref{fig5.6}）
+\begin{equation}
+\label{equ5.19}
+  P=\frac{Y-\psi}{X-0}
+\end{equation}
+或者
+\begin{equation}
+\label{equ5.20}
+  \psi=Y-PX
+\end{equation}
+
+现在我们假设我们已经有方程
+\begin{equation}
+\label{equ5.21}
+  Y=Y(X)
+\end{equation}
+并且通过求导我们可以得到
+\begin{equation}
+\label{equ5.22}
+  P=P(X)
+\end{equation}
+于是通过在方程\eqref{equ5.20}，\eqref{equ5.21}和\eqref{equ5.22}消除掉
+\footnote{在$P$不是与$X$无关的情况下这个消除是可以做到的，也就是要求$d^2Y/dX^2\neq0$。
+在热力学的应用中，这个标准跟稳定性的标准是等价的。
+这个标准只有在“临界点”才会失效，这会在第\ref{chap10}章里讨论。}
+$X$和$Y$我们就能得到想要的$\psi$和$P$之间的关系。
+勒让德（Legendre）变换的基本等式就是方程\eqref{equ5.20}，
+而这个方程可以被当成函数$\psi$的解析定义。
+函数$\psi$被称为$Y$的{\it 勒让德（Legendre）变换}。
+
+相反的问题是如果给出关系$\psi=\psi(P)$的话重新求出关系$Y=Y(X)$。
+我们可以看出在这里$(X,Y)$和$(\psi,P)$之间的关系跟它的逆关系是对称的，
+区别只是勒让德（Legendre）的方程中差了一个符号。
+对方程\eqref{equ5.20}求导并且应用$dY=PdX$，我们可以发现
+\begin{eqnarray}
+\label{equ5.23}
+  d\psi &=& dY-PdX-XdP \nonumber \\
+  ~ &=& -XdP
+\end{eqnarray}
+或者
+\begin{equation}
+\label{equ5.24}
+  -X=\frac{d\psi}{dP}
+\end{equation}
+如果从给出的方程$\psi=\psi(P)$和方程\eqref{equ5.24}和\eqref{equ5.20}中消除掉
+\footnote{这样做可能的条件是$d^2\psi/dP^2\neq0$，在热力学应用中是由考虑的系统的稳定性保证的。}
+两个变量$\psi$和$P$，我们就重构出了关系$Y=Y(X)$。
+勒让德（Legendre）变换和它的逆的对称性可以通过下面的对比表显示出来：
+\begin{equation*}
+\begin{array}{c|c}
+\hline
+Y=Y(X) & \psi=\psi(P) \\
+P=\frac{dY}{dX} & -X=\frac{d\psi}{dP} \\
+\psi=-PX+Y & Y=XP+\psi \\
+\text{消掉$X$和$Y$得到} & \text{消掉$P$和$\psi$得到} \\
+\psi=\psi(P) & Y=Y(X)\\
+\hline
+\end{array}
+\end{equation*}
+
+将勒让德（Legendre）变换推广到关于不止一个以及独立变量的函数是简单直接的。
+在三维中，$Y$是关于$X_0$和$X_1$的函数，同时基本方程表述了一个曲面。
+这个曲面可以被当成满足基本方程$Y=Y(X_0,X_1)$的点的轨迹，或者被当成切平面的包络面。
+一个平面可以用在在$Y$轴上的截距$\psi$和在$Y-X_0$以及$Y-X_1$平面上的轨迹的斜率$P_0$以及$P_1$来刻画。
+于是基本方程就是所有可能的平面中用$\psi=\psi(P_0,P_1)$描述的子集。
+
+一般地给出的基本关系
+\begin{equation}
+\label{equ5.25}
+  Y=Y(X_0,X_1,\ddots,X_t)
+\end{equation}
+表示了一个在具有笛卡尔坐标$Y,X_0,X_1,\dots,X_t$的$(t+2)$维空间中的超平面。
+导数
+\begin{equation}
+\label{equ5.26}
+  P_k=\frac{\partial Y}{\partial X_k}
+\end{equation}
+是曲面的偏斜率。
+超曲面可以等价地用满足方程\eqref{equ5.25}描述的点的轨迹或者切超平面的包络线来描述。
+切超平面族可以用超平面的截距$\psi$关于斜率$P_0,P_1,\ddots,P_t$的函数来刻画。
+于是
+\begin{equation}
+\label{equ5.27}
+  \psi=Y-\sum_kP_kX_k
+\end{equation}
+对这个方程求微分，我们可以发现
+\begin{equation}
+\label{equ5.28}
+  d\psi=-\sum_kX_kdP_k
+\end{equation}
+从而
+\begin{equation}
+\label{equ5.29}
+	-X_k = \frac{\partial \psi}{\partial P_k}
+\end{equation}
+勒让德（Legendre）变换实现了从$Y=Y(X_0,X_1,\ddots,X_t)$，方程组\eqref{equ5.26}和方程\eqref{equ5.27}中消去$Y$和$X_k$。
+逆变换实现了从从$\psi=\psi(P_0,P_1,\ddots,P_t)$，方程组\eqref{equ5.29}和方程\eqref{equ5.27}中消去$Y$和$X_k$。
+
+最后，勒让德（Legendre）变换可以仅仅在关系$Y=Y(X_0,X_1,\ddots,X_t)$的$(t+2)$维全空间中的一个$(n+2)$维子空间中进行。
+显然这个子空间必须包含$Y$坐标，但是可以包含集合$X_0,X_1,\ddots,X_t$中的任选$n+1$个坐标。
+为了记号上的方便，我们排列坐标使得勒让德（Legendre）变换作用在前$n+1$个坐标（以及$Y$）构成的子空间上；
+坐标$X_{n+1},X_{n+2},\ddots,X_t$保持不变。
+这样一个部分勒让德（Legendre）变换的作用只不过是在变幻中把$X_{n+1},X_{n+2},\ddots,X_t$当成常数。
+得到的勒让德（legendre）变换必须用一些精确的符号标记标出哪些独立变量参与了变换。
+我们引入标记$Y[P_0,P_1,\ddots,P_n]$来标记对函数$Y(X_0,X_1,\ddots,X_t)$做对应于$X_0,X_1,\ddots,x_n$的勒让德（Legendre）变换。
+从而$Y[P_0,P_1,\ddots,P_n]$就是一个关于独立变量$P_0,P_1,\ddots,P_n,X_{n+1},\ddots,X_t$的函数。
+在接下来的表中展示了在部分勒让德（Legendre）变换和它的逆变换中包含的各种关系。
+\begin{eqnarray}{c|c}
+	Y = Y(X_0,X_1,\ddots,X_t) & Y[P_0, P_1, \ddots, P_n] = P_0, P_1, \ddots, P_n, X_{n+1}, \ddots, X_t \, \text{的函数}\label{equ5.30}\\
+	P_k = \frac{\partial Y}{\partial X_k} & -X_k = \frac{\partial Y[P_0,\ddots,P_n]}{\partial P_k} \quad k\leq n\label{equ5.31} \\
+	~ & P_k = \frac{\partial Y[P_0,\ddots,P_n]}{\partial X_k} \quad k > n \nonumber \\
+	\text{偏微分表示了} Y \text{的所有除了} X_k \text{以外的自然变量（比如所有满足} j \neq k \text{的}X_j\text{）} & \text{偏微分表示了} Y[P_0,\ddots,P_n] \text{除了已经包含了其偏微分以外的所有自然变量。} \nonumber \\
+	dY = \sum_0^t P_k dX_k & dY[P_0, \ddots, P_n] = -\sum_0^n X_k dP_k + \sum_{n + 1}^t P_k dX_k \label{equ5.32}\\
+	Y[P_0, \ddots, P_n] = Y - \sum_0^n P_k X_k & Y = Y[P_0, \ddots, P_n] + \sum_0^n X_k P_k \label{equ5.33} \\
+	\text{从方程\eqref{equ5.30}，\eqref{5.33}和\eqref{5.31}的前}n+1\text{个方程中消除掉}Y\text{和}X_0, X_1, \ddots, X_n\text{可以导出变换后的基本关系。} & \text{从方程\eqref{equ5.30}，\eqref{5.33}和\eqref{5.31}的前} n + 1\text{个方程中消除掉} Y[P_0, \ddots, P_n] \text{和} P_0, P_1, \ddots, P_n \text{可以导出原始的基本关系。}\nonumber\\
+\end{eqnarray}
+
+在这一节中我们已经将勒让德（Legendre）变换的数学形式和物理应用分离开来。
+在这章接下来的小节中继续热力学的应用之前，或许非常将要地指出这个形式在拉格朗日（Lagrangian）和哈密顿（Hamiltonian）力学中的应用是很有趣的。
+而这或许是物理学中除了热力学以外最熟悉的领域。
+拉格朗日原理保证了一个特殊的函数，拉氏量完整地刻画了一i个力学系统的动力学。
+拉氏量是一个关于$2r$个变量的函数，其中$r$个是{\it 广义坐标},$r$个是{\it 广义速度}。因此方程
+\begin{equation}
+\label{equ5.34}
+  L=L(v_1,v_2,\ddots,v_r,q_1,q_2,\ddots,q_r)
+\end{equation}
+扮演了基本关系的角色。{\it 广义动量}被定义成拉氏量的导数
+\begin{equation}
+\label{equ5.35}
+	P_k \equiv \frac{\partial L}{\partial v_k}
+\end{equation}
+如果想要用动量代替速度作为独立变量，我们必须做关于速度的部分勒让德（Legendre）变换。
+从而我们引入一个新的函数，叫做哈密顿量，定义是
+\footnote{在我们的惯例中拉氏量的勒让德（Legendre）变换是{\it 负的}哈密顿量。实际上，被接受的数学惯例和力学中的惯例是一样的，而函数$-\psi$会被叫做$Y$的勒让德（Legendre）变换}
+\begin{equation}
+\label{equ5.36}
+  (-H)=L-\sum_1^rP_kv_k
+\end{equation}
+然后一个完整的动力学形式就可以基于这个新的基本关系
+\begin{equation}
+\label{equ5.37}
+  H=H(P_1,P_2,\ddots,P_r,q1,q2,\ddots,q_r)
+\end{equation}
+此外，根据方程\eqref{equ5.31}$H$的关于$P_k$的导数是速度$v_k$，也就是哈密顿动力学方程之一。
+因此如果形如\eqref{equ5.34}的一个方程被当成拉格朗日（Lagrangian）表述的动力学方程，那么哈密顿方程\eqref{equ5.37}就是哈密顿（Hamiltonian）表述中等价的基本方程。

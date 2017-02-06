@@ -24,8 +24,9 @@
 \newcommand\cirfootnote{\ding{\numexpr171+\value{footnote}}}
 \usepackage{ctex,amsmath}
 \usepackage{mathrsfs}
-\usepackage[per-mode=symbol]{siunitx}
+\usepackage[per-mode=symbol,inter-unit-product=\ensuremath{{}\cdot{}}]{siunitx}
 \DeclareSIUnit[number-unit-product=\,]\degreeF{\degree F}
+\DeclareSIUnit[number-unit-product=\,]\degreeR{\degree R}
 \DeclareSIUnit[number-unit-product=\,]\calorie{cal}
 \usepackage{cancel}
 \usepackage{bm}

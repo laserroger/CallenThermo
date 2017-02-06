@@ -1,0 +1,73 @@
+% 翻译：SI
+% 未校对！
+
+\chapter{Maxwell关系}
+\label{chap7}
+
+\section{Maxwell关系}
+\label{sec7.1}
+\ref{sec3.9}节\mpar{原文为\ref{sec3.6}节，根据内容来看应该是\ref{sec3.9}节。这里进行了修改。}讨论了绝热压缩率、热膨胀系数、摩尔热容等热力学量的物理意义。它们都具有$(\partial X / \partial Y)_{Z, W}$的形式，式中字母表示热力学广延量或强度量。一般的热力学系统有许多热力学量，从而可以构造大量这样的导数。但是众多的导数量之间存在羁绊，其中只有一小部分是独立的，其余的量可以用这一小部分表示。自然，这些关系可以大大简化热力学分析。并且我们不需要特意记忆公式\mpar{比如“{\bf G}ood {\bf P}hysicists {\bf H}ave {\bf S}tudied {\bf U}nder {\bf V}ery {\bf F}ine {\bf T}eachers”什么的……\sout{来自热统课的惨痛回忆}\ \sout{\ref{sec7.2}节有首字母相同的另一句话} }。 下面介绍在热力学计算过程中用到的简单、直接推导这些关系的方法，也就是本章的主题。
+
+首先说明这些导数量之间“羁绊”的存在性，考虑\eqref{equ3.70}与\eqref{equ3.71}式：
+\begin{align}
+	\frac{\partial^2 U}{\partial S \partial V} &= \frac{\partial^2 U}{\partial V \partial S}, \label{equ7.1} \\
+	-\left( \frac{\partial P}{\partial S} \right)_{V, N_1, N_2} &= \left( \frac{\partial T}{\partial V} \right)_{S, N_1, N_2}. \label{equ7.2}
+\end{align}
+上式是导数量的“羁绊”——称为{\it Maxwell 关系 (Maxwell relations)}——的源头，亦即，导数量之间的依赖关系源自基本方程（在不同表象下）的混合导数不依赖于求导次序。
+
+某一热力学量依赖于$(t + 1)$个自变量，从而有$t(t + 1)/2$种不同的混合偏导数，因此每一热力学量对应$t(t + 1)/2 = 3$个Maxwell关系。
+
+单组分简单系统的内能的自变量有$3$个，即$t = 2$，从而有$(2 \cdot 3)/2$个混合偏导数：
+\[
+	\frac{\partial^2 U}{\partial S \partial V} = \frac{\partial^2 U}{\partial V \partial S}, \quad \frac{\partial^2 U}{\partial S \partial N} = \frac{\partial^2 U}{\partial N \partial S}, \quad \frac{\partial^2 U}{\partial V \partial N} = \frac{\partial^2 U}{\partial N \partial V}.
+\]
+单组分简单系统的Maxwell列成下表。其中第一列是混合求导的热力学量，第二列是混合求导对应的两个（独立）自变量，第三列是相应的Maxwell关系。\ref{sec7.2}节提供了一种写出这些关系的辅助图像方法。\ref{sec7.3}节举例说明如何利用这些关系解决热力学问题。
+
+\begin{align}
+	&U \quad &S, V \quad & \left( \frac{\partial T}{\partial V} \right)_{S, N} =& -\left( \frac{\partial P}{\partial S} \right)_{V, N} \label{equ7.3} \\
+	&dU = TdS - PdV + \mu dN \quad & S, N \quad & \left( \frac{\partial T}{\partial N} \right)_{S, V} =& \left( \frac{\partial \mu}{\partial S} \right)_{V, N} \label{equ7.4} \\
+	&\phantom{dU = TdS - PdV + \mu dN \quad} & V, N \quad & -\left( \frac{\partial P}{\partial N} \right)_{S, V} &= \left( \frac{\partial \mu}{\partial V} \right)_{S, N} \label{equ7.5}
+\end{align}
+————————————————————————————————
+\begin{align}
+	&U[T]\equiv F & T, V \quad & \left(\frac{\partial S}{\partial V} \right)_{T, N} &= \left( \frac{\partial P}{\partial T} \right)_{V, N} \label{equ7.6} \\
+	&dF = -SdT - PdV + \mu dN \quad & T, N \quad & -\left(\frac{\partial S}{\partial N}\right)_{T, V} &= \left(\frac{\partial \mu}{\partial T} \right)_{V, N} \label{equ7.7} \\
+	&\phantom{dF = -SdT - PdV + \mu dN \quad} & V, N \quad & -\left( \frac{\partial P}{\partial N} \right)_{T, V} &= \left( \frac{\partial \mu}{\partial V} \right)_{T, N} \label{equ7.8}
+\end{align}
+————————————————————————————————
+\begin{align}
+	& U[P] \equiv H \quad & S, P \quad & \left( \frac{\partial T}{\partial P} \right)_{S, N} &= \left( \frac{\partial V}{\partial S} \right)_{P, N} \label{equ7.9} \\
+	&dH = TdS + VdP + \mu dN \quad & S, N \quad & \left( \frac{\partial T}{\partial N} \right)_{S, P} &= \left( \frac{\partial \mu}{\partial S} \right)_{P, N} \label{equ7.10} \\
+	&\phantom{dH = TdS + VdP + \mu dN \quad} & P, N \quad & \left(\frac{\partial V}{\partial N} \right)_{S, P} &= \left( \frac{\partial \mu}{\partial P} \right)_{S, N} \label{equ7.11} 
+\end{align}
+————————————————————————————————
+\begin{align}
+	& U[\mu] \quad & S, V \quad & \left(\frac{\partial T}{\partial V} \right)_{S, \mu} &= -\left( \frac{\partial P}{\partial S} \right)_{V, \mu} \label{equ7.12} \\
+	& dU[\mu] = TdS - PdV - Nd\mu \quad & S, \mu \quad & \left(\frac{\partial T}{\partial \mu} \right)_{S, V} &= -\left( \frac{\partial N}{\partial S} \right)_{V, \mu} \label{equ7.13} \\
+	& \phantom{dU[\mu] = TdS - PdV - Nd\mu \quad} & V, \mu \quad & \left(\frac{\partial P}{\partial \mu} \right)_{S, V} &= \left( \frac{\partial N}{\partial V} \right)_{S, \mu} \label{equ7.14}
+\end{align}
+————————————————————————————————
+\begin{align}
+	& U[T, P] \equiv G \quad & T, P \quad & -\left( \frac{\partial S}{\partial P} \right)_{T, N} &= \left( \frac{\partial V}{\partial T} \right)_{P, N} \label{equ7.15} \\
+	& dG = -SdT + VdP + \mu dN \quad & T, N \quad & -\left( \frac{\partial S}{\partial N} \right)_{T, P} &= \left( \frac{\partial \mu}{\partial T} \right)_{P, N} \label{equ7.16} \\
+	& \phantom{dG = -SdT + VdP + \mu dN \quad} & P, N \quad & \left( \frac{\partial V}{\partial N} \right)_{T, P} &= \left( \frac{\partial \mu}{\partial P} \right)_{T, N} \label{equ7.17}
+\end{align}
+————————————————————————————————
+\begin{align}
+	& U[T, \mu] \quad & T, V \quad & \left( \frac{\partial S}{\partial V} \right)_{T, \mu} &= \left( \frac{\partial P}{\partial T} \right)_{V, \mu} \label{equ7.18} \\
+	& dU[T, \mu] = -SdT - PdV - Nd\mu \quad & T, \mu \quad & \left( \frac{\partial S}{\partial \mu} \right)_{T, V} &= \left( \frac{\partial N}{\partial T} \right)_{V, \mu} \label{equ7.19} \\
+	& \phantom{dU[T, \mu] = -SdT - PdV - Nd\mu \quad} & V, \mu \quad & \left( \frac{\partial P}{\partial \mu} \right)_{T, V} &= \left( \frac{\partial N}{\partial V} \right)_{T, \mu} \label{equ7.20}
+\end{align}
+————————————————————————————————
+\begin{align}
+	& U[P, \mu] \quad & S, P \quad & \left( \frac{\partial T}{\partial P} \right)_{S, \mu} =& \left( \frac{\partial V}{\partial S} \right)_{P, \mu} \label{equ7.21} \\
+	& dU[P, \mu] = TdS + VdP + Nd\mu \quad & S, \mu \quad & \left( \frac{\partial T}{\partial \mu} \right)_{S, P} =& -\left( \frac{\partial N}{\partial S} \right)_{P, \mu} \label{equ7.22} \\
+	& \phantom{ dU[P, \mu] = TdS + VdP + Nd\mu \quad} & P, \mu \quad & \left( \frac{\partial V}{\partial \mu} \right)_{S, P} =& -\left( \frac{\partial N}{\partial P} \right)_{S, \mu} \label{equ7.23}
+\end{align}
+————————————————————————————————
+
+\section{Maxwell关系的辅助记忆图}
+\label{sec7.2}
+
+\section{一种减少单组分系统导数量的步骤}
+\label{sec7.3}

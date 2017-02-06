@@ -1,5 +1,5 @@
 %----------------------------------------------------------------------------------------
-%	翻译：
+%	翻译：SI, 哪托儿闹海
 %   校对：未校对！
 %----------------------------------------------------------------------------------------
 
@@ -537,5 +537,105 @@ Gibbs-Duhem关系为
 
 \subsection*{习题}
 
+
 \section{摩尔热容与其他导出量}
 \label{sec3.9}
+我们早就知道基本方程中的一阶微分具有重要的物理意义. 而二阶微分一般是描述物质性质的参数，而且是物理上而言更直接的量\mpar{原文“of most direct physical interest”}，因此我们将考察一些特别的二阶微分量并阐述其作用. 之后，在第7章中，我们将以一种更规整的结构回过头来学习这些二阶微分量，在那里你会看到只有很小一部分二阶微分是独立的，其他的都可以通过一种自成体系的“约化规则”与这些独立量相关联. 对于不考虑磁作用的简单系统，基本的微分量(诸多其他的微分量与这些基本的量相关)只有三组.
+
+“热膨胀系数\mpar{即定压膨胀系数}”定义为
+\begin{equation}
+\label{equ3.67}
+\alpha=\frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_P=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P
+\end{equation}
+它描述了系统压强恒定(组分的摩尔数也恒定)的情况下，增加一个单位温度后，系统体积与变化之前的体积之比.
+
+“等温压缩系数”定义为
+\begin{equation}
+\label{equ3.68}
+\kappa_T\equiv-\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_T=\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T
+\end{equation}
+它描述了系统温度恒定(组分的摩尔数也恒定)的情况下，增加一个单位压强后，系统体积与变化之前的体积之比.
+
+“摩尔定压热容系数”定义为
+\begin{equation}
+\label{equ3.69}
+c_P=T\left(\frac{\partial s}{\partial T}\right)_P=\frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_P=\frac{1}{N}\left(\frac{\text{d}Q}{\text{d}T}\right)_P
+\end{equation}
+它描述了系统压强恒定(组分的摩尔数也恒定)的情况下，让体系的温度增加一个单位所需的热量.
+
+对于组分的摩尔数恒定的系统，其他的二阶微分量都可以由这三个来表示，所以这三个量在不同压强和温度下的值常被人们制成表格.
+
+二阶微分量之间的关系怎么导出？原则上，我们可以这样想（更完整的表述在第7章中）.最简单的关系也许是：
+\begin{equation}
+\label{equ3.70}
+\left(\frac{\partial T}{\partial V}\right)_{S,N}=-\left(\frac{\partial P}{\partial S}\right)_{V,N}
+\end{equation}
+导出如下：由微积分的基本知识可知，$U$对$S,V$的二阶混合偏导数相等
+\begin{equation}
+\label{3.71}
+\frac{\partial}{\partial V}\left(\frac{\partial U}{\partial S}\right)=\frac{\partial}{\partial S}\left(\frac{\partial U}{\partial V}\right)
+\end{equation}
+由此即得\eqref{equ3.70}
+
+\eqref{equ3.70}中的两个（二阶微分）量具有很直观的物理意义，而且都可被直接测量. $\left(\frac{\partial T}{\partial V}\right)_{S_N}$对应绝热过程中温度随体积的变化率；而$-\left(\frac{\partial P}{\partial S}\right)_{V,N}$可以写作$T\left(\frac{\text{d} P}{\text{d} Q}\right)_{V,N}$则是压强与输入系统的热量$\text{d}Q$之比（在体积不变的情况下）.这两个看起来毫无关系的量被联系在了一起，这是很不简单的结果，实际上，这是热力学理论的第一次胜利. 毫无疑问，实验结果也支持这个等式.
+
+\eqref{equ3.70}在熵表象下的表达式为：
+\begin{equation}
+\label{equ3.72}
+\frac{\partial }{\partial V}\left(\frac{1}{T}\right)_{U,N}=\frac{\partial }{\partial U}\left(\frac{P}{T}\right)_{V,N}
+\end{equation}
+我们马上就可以发现，这个就是我们在\eqref{equ3.46}中为了求van der Waals方程对应的热状态方程所引入的等式.
+
+在第7章中，我们将看到，这些等式实际上就是一类很普遍的类似关系（被称作Maxwell关系）\mpar{原文“analogous relationship”}的原型.Maxwell关系以简洁的形式将两个二阶微分量联系在一起，实际上，Maxwell关系是一个更加普适的定理的退化形式，该定理表明，任意四个微分量之间必然有一个关系.这些关系让我们能将任意一个二阶微分量用“基本集”\mpar{所谓基本集，就是由$c_p,\alpha,\kappa_T$这些既基础且有明确物理意义的量组成的集合——译者注.}中的元素$c_p,\alpha,\kappa_T$表示出来(在恒定$N$的情况下).
+
+为了阐明这些预想的关系，我们先引入两个具有实际意义的二阶微分量；绝热压缩率$\kappa_S$和定压摩尔热容$c_v$.
+
+$\textbf{绝热压缩率}$定义如下：
+\begin{equation}
+\label{equ3.73}
+\kappa_s=-\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_s=-\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_S
+\end{equation}
+它表征了熵恒定的情况下（比如绝热系统），体积在压强变化时的下降率.
+
+$\textbf{定压摩尔热容}$定义如下：
+\begin{equation}
+\label{equ3.74}
+c_v=T\left(\frac{\partial s}{\partial T}\right)_v=\frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_V=\frac{1}{N}\left(\frac{\dbar Q}{\text{d}T}\right)_V
+\end{equation}
+它表征了恒容准静态过程中，体系中一摩尔物质的温度每升高一度所需要的热量（也就是热量除以体系的物质的量）.
+
+在第7章中，我们会证明
+\begin{equation}
+\label{equ3.75}
+c_P=c_v+\frac{TV\alpha^2}{N\kappa_T}
+\end{equation}
+以及
+\begin{equation}
+\label{equ3.76}
+\kappa_T=\kappa_S+\frac{TV\alpha^2}{Nc_P}
+\end{equation}
+再次强调，这里我们并不需要将注意力放在\eqref{equ3.75}\eqref{equ3.76}这两个式子的的细节上，而是要引起读者对三个基本量$c_p;\alpha;\kappa_T$的注意，通过这三个基本量，我们可以将所有其他的微分量表示出来（比如$c_v;\kappa_S$），因此这三个基本量关于$T,P$的函数常被列作表格以资查阅利用.如何更加系统地导出这些等式？如何方便的记忆它们？我们将在第7章详细介绍.
+
+推荐学生做做习题3.9-6.
+\[\hspace{-15mm}\textbf{例题}\]
+一种物质的$c_p,\alpha,\kappa_T$关于$T,P$的函数已被做成表格（即已知它们关于$T,P$的函数）.试找出摩尔体积$v$关于$T,P$的函数
+\[\hspace{-15mm}\texttt{解答}\]
+我们在$T-P$平面上考虑问题. $c_p,\alpha ,\kappa_T$关于$T,P$的函数值在全平面上都已知，然后我们试图寻找$v(T,P)$的表达式，首先
+\begin{align}
+\text{d}v&=\left(\frac{\partial v}{\partial P}\right)_T\ \text{d}P+\left(\frac{\partial v}{\partial T}\right)_P\ \text{d}T\\
+&=-v\kappa_T\ \text{d}P+v\alpha\ \text{d}T
+\end{align}
+	或
+\[\frac{\text{d}v}{v}=-\kappa_T\ \text{d}P+\alpha\ \text{d}T\]
+如果选$(T_0,P_0)$为参考点，且$(T^\prime,P^\prime)$是我们感兴趣的点，那么我们按照图示的路径进行积分（或者你可以选择任意一条合适的路径）.对于我们选定的这个路径而言，在它的水平段上，$\text{d}T=0$，在它的竖直段上，$\text{d}P=0$，因此
+\[\int\frac{dv}{v}=\int_{T_0}^{T^\prime}\alpha(T,P_0)\ \text{d}T-\int_{P_0}^{P^\prime}\kappa_T(T^\prime,P)\ \text{d}P\]
+	或写成
+\[\ln{\frac{v^\prime}{v_0}}=\int_{T_0}^{T^\prime}\alpha(T,P_0)\ \text{d}T-\int_{P_0}^{P^\prime}\kappa_T(T^\prime,P)\ \text{d}P\]
+需注意，我们需要确定$v_0$时的摩尔体积，因为接下来我们将把其他时候的体积与$v_0$时的摩尔体积关联起来.
+
+{
+    \centering
+    \includegraphics[scale=0.7]{fig3_9.eps}
+}
+
+\subsection*{习题}

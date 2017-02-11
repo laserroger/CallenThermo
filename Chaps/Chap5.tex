@@ -407,3 +407,153 @@ P=\frac{dY}{dX} & -X=\frac{d\psi}{dP} \\
 \end{equation}
 此外，根据方程\eqref{equ5.31}$H$的关于$P_k$的导数是速度$v_k$，也就是哈密顿动力学方程之一。
 因此如果形如\eqref{equ5.34}的一个方程被当成拉格朗日（Lagrangian）表述的动力学方程，那么哈密顿方程\eqref{equ5.37}就是哈密顿（Hamiltonian）表述中等价的基本方程。
+
+
+
+\section{热力学势}
+\label{sec5.3}
+
+前面介绍的形式在热力学中的应用是不言自明的。
+基本关系$Y=Y(X_0,X_1,\ddots)$可以被解释为能量表述的基本关系$U=U(S,X_1,X_2,\ddots,X_t)$或者$U=U(S,V,N_1,N_2,\ddots)$。
+而偏导数$P_0,P_1,\ddots$对应着强度量$T,-P,\mu_1,\mu_2,\ddots$。
+勒让德（Legendre）变换后的函数被叫做{\it 热力学势}，而现在我们明确定义它们中最一般的几个。
+在第\ref{chap6}章中我们通过得到每一个势的极值原理继续关于这些函数的讨论，表明每一个的直观意义，并且讨论在热力学理论中它们的特殊角色。
+但现在我们关注几个特定的函数的定义的形式化方面。
+
+{\it 亥姆霍兹（Helmholtz）势}或者{\it 亥姆霍兹（Helmholtz）自由能}，是$U$用温度代替熵成为独立变量的勒让德（Legendre）变换。
+国际上使用的亥姆霍兹（Helmholtz）势的符号是$F$。
+亥姆霍兹（Helmholtz）势的自然变量是$T,V,N_1,N_2,\ddots$。
+也就是函数关系$F=F(T,V,N_1,N_2,\ddots)$构成一个基本关系。
+在\ref{sec5.2}节中的系统记号
+\begin{equation}
+\label{equ5.38}
+  F\equiv U[T]
+\end{equation}
+
+能量表述和亥姆霍兹（Helmholtz）表述的完整关系，总结在了下面的对比表中：
+\begin{eqnarray}{c|c}
+U=U(S,V,N_1,N_2,\ddots) & F=F(T,V,N_1,N_2,\ddots)\label{equ5.39}\\
+T=\partial U/\partial S & -S=\partial F/\partial T\label{equ5.40} \\
+F=U-TS & U=F+TS \label{equ5.41} \\
+\text{消去$U$和$S$得到} & \text{消去$F$和$T$得到}\nonumber\\
+F=F(T,V,N_1,N_2,\ddots) & U=U(S,V,N_1,N_2,\ddots)\nonumber\\
+\end{eqnarray}
+
+全微分$dF$是
+\begin{equation}
+\label{equ5.42}
+  dF=-SdT-PdV+\mu_1dN_1+\mu_2dN_2+\cdots
+\end{equation}
+
+{\it 焓}是$U$用压强代替体积成为独立变量的部分勒让德（Legendre）变换。
+按照国际物理学会和化学学会的建议，以及跟基本上普适的用法保持一致，我们用符号$H$来标记焓。
+这个势的自然变量是$S,P,N_1,N_2,\ddots$而且
+\begin{equation}
+\label{equ5.43}
+  H\equiv U[P]
+\end{equation}
+表示能量和焓表述的关系的表如下
+\begin{eqnarray}{c|c}
+U=U(S,V,N_1,N_2,\ddots) & H=H(S,P,N_1,N_2,\ddots)\label{equ5.44}\\
+-P=\partial U/\partial V & V=\partial H/\partial P\label{equ5.45} \\
+H=U+PV & U=H-PV \label{equ5.46} \\
+\text{消去$U$和$V$得到} & \text{消去$H$和$P$得到}\nonumber\\
+H=H(S,P,N_1,N_2,\ddots) & U=U(S,V,N_1,N_2,\ddots)\nonumber\\
+\end{eqnarray}
+
+需要特别注意的是方程\eqref{equ5.45}和\eqref{equ5.46}的符号的反转，
+导致了$-P$成为了对应$V$的强度量。
+全微分$dH$是
+\begin{equation}
+\label{equ5.47}
+  dH=TdS+VdP+\mu_1dN_1+\mu_2dN_2+\cdots
+\end{equation}
+
+第三个常用的能量的勒让德（Legendre）变换是{\it 吉布斯（Gibbs）势}或者叫{\it 吉布斯（Gibbs）自由能}。
+这个势是同时用温度代替熵并用压强代替体积作为独立变量的勒让德（Legendre）变换.
+标准的记号是$G$，而自然变量是$T,P,N_1,N_2,\ddots$。
+从而我们有
+\begin{equation}
+\label{equ5.48}
+  G\equiv U[T,P]
+\end{equation}
+以及
+\begin{eqnarray}{c|c}
+U=U(S,V,N_1,N_2,\ddots) & G=G(T,P,N_1,N_2,\ddots)\label{equ5.49}\\
+T=\partial U/\partial S & -S=\partial G/\partial T\label{equ5.50} \\
+-P=\partial U/\partial V & V=\partial G/\partial P\label{equ5.51} \\
+G=U-TS+PV & U=G+TS-PV \label{equ5.52} \\
+\text{消去$U$,$S$和$V$得到} & \text{消去$H$，$T$和$P$得到}\nonumber\\
+G=G(T,P,N_1,N_2,\ddots) & U=U(S,V,N_1,N_2,\ddots)\nonumber\\
+\end{eqnarray}
+
+全微分$dG$是
+\begin{equation}
+\label{equ5.53}
+  dG=-SdT+VdP+\mu_1dN_1+\mu_2dN_2+\cdots
+\end{equation}
+
+一个从统计力学中自然出现的热力学势是{\it 巨正则势}，$U[T,\mu]$。
+对于这个势我们有
+\begin{eqnarray}{c|c}
+U=U(S,V,N) & U[T,\mu]=T,V,\text{和}\mu\text{的函数}\label{equ5.54}\\
+T=\partial U/\partial S & -S=\partial U[T,\mu]/\partial T\label{equ5.55} \\
+\mu=\partial U/\partial N & -N=\partial U[T,\mu]/\partial\mu\label{equ5.56} \\
+U[T,\mu]=U-TS-\mu N & U=U[T,\mu]+TS+\mu N \label{equ5.57} \\
+\text{消去$U$,$S$和$N$得到} & \text{消去$U[T,\mu]$，$T$和$P$得到}\nonumber\\
+T,V,\mu\text{的函数}U[T,\mu] & U=U(S,V,N)\nonumber\\
+\end{eqnarray}
+
+对于一个简单系统其它可能的变换，也就是那些很少以及几乎不用的并没有被起名，
+包括$U[\mu_1]$，$U[P,\mu_1]$，$U[T,\mu_1,\mu_2]$等等。
+完全的勒让德（Legendre）变换是$U[T,P,\mu_1,\mu_2,\ddots,\mu_r]$。
+由于事实上$U(S,V,N_1,N_2,\ddots,N_t)$是它的参数的一阶齐次函数导致了后一个函数严格为0。
+对于
+\begin{equation}
+\label{5.59}
+  U[T,P,\mu_1,\mu_2,\ddots,\mu_r]=U-TS+PV-\mu_1N_1-\mu_2N_2-\cdots-\mu_rN_r
+\end{equation}
+根据欧拉（Euler）关系（\eqref{equ3.6}），是恒等于零的
+\begin{equation}
+\label{5.60}
+  U[T,P,\mu_1,\mu_2,\ddots,\mu_r]\equiv 0
+\end{equation}
+
+\section{推广的马休（Massieu）函数}
+\label{sec5.4}
+
+鉴于最常用的函数可以用勒让德（Legendre）变换定义的函数就是\ref{sec5.3}中提到的那些，
+另一组可以同归对熵而不是能量做勒让德（Legendre）变换得到。
+也就是形如$S=S(U,V,N_1,N_2,\ddots)$的基本关系可以被当成变换作用的关系。
+这种对熵的勒让德（Legendre）变换是1869年马休（Massieu）发明的并且遭遇吉布斯（Gibbs）在1875年引入的对能量的变换。
+我们把对于熵的变换叫做{\it 马休（Massieu）函数}，用来跟从能量变换得到的{\it 热力学势}做出区分。
+马休（Massieu）函数在不可逆热力学的理论中会特别有用，并且在统计力学以及热涨落理论中会自然出现。
+三个典型的马休（Massieu）函数包括$S[1/T]$，其中温度的倒数代替能量成为了独立变量；$S[P/T]$，其中$P/T$代替体积成为了独立变量；以及$S[1/T,P/T]$，两个替换同时进行。显然
+\begin{equation}
+\label{equ5.61}\
+  S\left[\frac{1}{T}\right]\equiv S-\frac{1}{T}U=-\frac{F}{T}
+\end{equation}
+\begin{equation}
+\label{equ5.62}\
+  S\left[\frac{P}{T}\right]\equiv S-\frac{P}{T}\cdot V
+\end{equation}
+以及
+\begin{equation}
+\label{equ5.63}\
+  S\left[\frac{1}{T},\frac{P}{T}\right]\equiv S-\frac{1}{T}U-\frac{P}{T}\cdot V=-\frac{G}{T}
+\end{equation}
+从而，这三个中只有$S[P/T]$是不平凡地依赖于前面介绍过的某一个热力学势的。
+对于这个函数
+\begin{eqnarray}{c|c}
+S=S(U,V,N_1,N_2,\ddots) & S[P/T]=U,P/T,N_1,N_2\text{的函数}\label{equ5.64}\\
+P/T=\partial S/\partial V & -V=\partial S[P/T]/\partial(P/T)\label{equ5.65} \\
+S[P/T]=US-(P/T)V & S=S[P/T]+(P/T)V \label{equ5.66} \\
+\text{消去$S$和$V$得到} & \text{消去$S[P/T]$和$P/T$得到}\nonumber\\
+U,P/T,N_1,N_2,\ddots\text{的函数}S[P/T] & S=S(U,V,N_1,N_2,\ddots)\nonumber
+\end{eqnarray}
+以及
+\begin{equation}
+\label{5.67}
+dS[P/T]=(1/T)dU-Vd(P/T)-(\mu_1/T)dN_1-(\mu_2/T)dN_2\ddots
+\end{equation}
+其它的马休（Massieu）函数可以在读者在特殊情况下用到它们时自己定义和分析。

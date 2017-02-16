@@ -30,8 +30,8 @@
 \contentsline {section}{\numberline {3.3}形式关系总结}{50}{section.3.3}
 \contentsline {section}{\numberline {3.4}单组分/多组分简单理想气体}{52}{section.3.4}
 \contentsline {section}{\numberline {3.5}理想van der Waals流体}{56}{section.3.5}
-\contentsline {section}{\numberline {3.6}黑体辐射系统}{58}{section.3.6}
-\contentsline {section}{\numberline {3.7}橡胶带系统}{59}{section.3.7}
+\contentsline {section}{\numberline {3.6}黑体辐射系统}{59}{section.3.6}
+\contentsline {section}{\numberline {3.7}橡胶带系统}{60}{section.3.7}
 \contentsline {section}{\numberline {3.8}不可控变量；磁系统}{61}{section.3.8}
 \contentsline {section}{\numberline {3.9}摩尔热容与其他导出量}{62}{section.3.9}
 \contentsline {chapter}{\numberline {4}可逆过程和最大功定理}{67}{chapter.4}
@@ -39,15 +39,14 @@
 \contentsline {section}{\numberline {4.2}准静态和绝热过程}{70}{section.4.2}
 \contentsline {section}{\numberline {4.3}弛豫时间和不可逆性}{74}{section.4.3}
 \contentsline {section}{\numberline {4.4}热流：耦合系统和逆过程}{75}{section.4.4}
-\contentsline {section}{\numberline {4.5}热机、制冷机和热泵的工作功率}{77}{section.4.5}
-\contentsline {chapter}{\numberline {5}其它形式与勒让德变换}{81}{chapter.5}
-\contentsline {section}{\numberline {5.1}能量最小原理}{81}{section.5.1}
-\contentsline {section}{\numberline {5.2}勒让德变换}{85}{section.5.2}
-\contentsline {chapter}{\numberline {6}Legendre变换表象中的极值原理}{91}{chapter.6}
-\contentsline {section}{\numberline {6.1}势能最小原理}{91}{section.6.1}
-\contentsline {section}{\numberline {6.2}Helmholtz势}{95}{section.6.2}
-\contentsline {chapter}{\numberline {7}Maxwell关系}{97}{chapter.7}
-\contentsline {section}{\numberline {7.1}Maxwell关系}{97}{section.7.1}
-\contentsline {section}{\numberline {7.2}Maxwell关系的辅助记忆图}{100}{section.7.2}
-\contentsline {section}{\numberline {7.3}一种减少单组分系统导数量的步骤}{100}{section.7.3}
+\contentsline {section}{\numberline {4.5}最大功定理}{77}{section.4.5}
+\contentsline {section}{\numberline {4.6}热机、制冷机和热泵的工作功率}{82}{section.4.6}
+\contentsline {chapter}{\numberline {5}其它形式与勒让德变换}{87}{chapter.5}
+\contentsline {section}{\numberline {5.1}能量最小原理}{87}{section.5.1}
+\contentsline {section}{\numberline {5.2}勒让德变换}{91}{section.5.2}
+\contentsline {section}{\numberline {5.3}热力学势}{96}{section.5.3}
+\contentsline {section}{\numberline {5.4}推广的马休（Massieu）函数}{99}{section.5.4}
+\contentsline {chapter}{\numberline {6}Legendre变换表象中的极值原理}{101}{chapter.6}
+\contentsline {section}{\numberline {6.1}势能最小原理}{101}{section.6.1}
+\contentsline {section}{\numberline {6.2}Helmholtz势}{105}{section.6.2}
 \contentsfinish 

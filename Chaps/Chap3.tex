@@ -1,7 +1,6 @@
-%!TEX root = ../CallenThermo.tex
 %----------------------------------------------------------------------------------------
 %	翻译：SI, 哪托儿闹海
-%   校对：未校对！
+%   校对：lh, SI
 %----------------------------------------------------------------------------------------
 
 
@@ -109,7 +108,7 @@
 
 Gibbs-Duhem关系是强度量之间关系的微分形式，将该式积分即得到显式形式，这是除$\eqref{equ3.9} \sim \eqref{equ3.11}$式外的另一种计算套路。Gibbs-Duhem关系的积分：
 \[
-	\int S(T, P_1, \dots, P_t) \,\mathrm dT + \sum_{j = 1}^t \int X_j(T, P_1, \\,\mathrm dots, P_t) \,\mathrm dP_j = 0
+	\int S(T, P_1, \dots, P_t) \,\rd T + \sum_{j = 1}^t \int X_j(T, P_1, \dots, P_t) \,\rd P_j = 0
 \]
 需要知道各广延量$X_j$用强度量$P_j$表示的形式，这可以从状态方程\mpar{状态方程：强度量作为广延量的函数}解出。因此积分Gibbs-Duhem关系必须知道系统的状态方程。
 
@@ -240,7 +239,7 @@ Gibbs-Duhem关系式是：
 最后这三个状态方程会被代入Euler方程,Euler方程为:
 \begin{equation}
 \label{equ3.31}
-S=(\frac{1}{T})U+(\frac{P}{T})V-\frac{\mu}{T}N
+S = \left( \frac{1}{T} \right) U + \left( \frac{P}{T} \right) V - \frac{\mu}{T} N
 \end{equation}
 
 现在我们来实打实地干一番：将\eqref{equ3.25}\eqref{equ3.26}代入Gibbs-Duhem关系式可得：
@@ -251,9 +250,9 @@ S=(\frac{1}{T})U+(\frac{P}{T})V-\frac{\mu}{T}N
 积分之后得
 \begin{equation}
 \label{equ3.33}
-\frac{\mu}{T}-(\frac{\mu}{T})_0=-cR\ln{\frac{u}{u_0}}-R\ln{\frac{v}{v_0}}
+\frac{\mu}{T}- \left( \frac{\mu}{T} \right)_0 = -cR\ln{\frac{u}{u_0}}-R\ln{\frac{v}{v_0}}
 \end{equation}
-其中$u_0,v_0$是一个固定的参考态，$(\frac{\mu}{T})_0$即随之产生的积分常数. 然后由Euler方程\eqref{equ3.31}可得
+其中$u_0,v_0$是一个固定的参考态，$\displaystyle{ \left( \frac{\mu}{T} \right)_0 }$即随之产生的积分常数. 然后由Euler方程\eqref{equ3.31}可得
 \begin{equation}
 \label{equ3.34}
 S=Ns_0+NR\ln\left[\left(\frac{U}{U_0}\right)^c\left(\frac{V}{V_0}\right)\left(\frac{N}{N_0}\right)^{-(c+1)}\right]
@@ -261,16 +260,16 @@ S=Ns_0+NR\ln\left[\left(\frac{U}{U_0}\right)^c\left(\frac{V}{V_0}\right)\left(\f
 其中
 \begin{equation}
 \label{equ3.35}
-s_0=(c+1)R-\left(\frac{\mu}{T}\right)
+s_0=(c+1)R-\left(\frac{\mu}{T}\right)_0
 \end{equation}
 方程\eqref{equ3.34}就是要求的基本方程；如果积分常数$s_0$已知，那么方程\eqref{equ3.34}就包含了简单理想气体所有的热力学信息.
 
-这种方式并非唯一的求解办法，甚至也非最常用的. 更直接的办法是将下式(摩尔量方程 molar equation)积分
+这种方式并非唯一的求解办法，甚至也非最常用的. 更直接的办法是将下式(摩尔量方程, molar equation)积分
 \begin{equation}
 \label{equ3.36}
 \text{d}s=\left(\frac{1}{T}\right)\,\text{d}u+\left(\frac{P}{T}\right)\,\text{d}v
 \end{equation}
-再目前的问题中(目前我们所处理是理想气体)；它变为
+在目前的问题中（理想气体），它变为
 \begin{equation}
 \label{equ3.37}
 \text{d}s=c\left(\frac{R}{u}\right)\,\text{d}u+\left(\frac{R}{v}\right)\,\text{d}v
@@ -278,35 +277,37 @@ s_0=(c+1)R-\left(\frac{\mu}{T}\right)
 积分后得
 \begin{equation}
 \label{equ3.38}
-s=s_0+cR\ln(\frac{u}{u_0})+R\ln(\frac{v}{v_0})
+s = s_0 + cR \ln \left( \frac{u}{u_0} \right) + R\ln \left( \frac{v}{v_0} \right)
 \end{equation}
 这个方程与\eqref{equ3.34}等价.
 
-应当注意，方程\eqref{equ3.37}是逐项可积的，但我们在例3中会提到，这样的方法在更一般的情况下无法实现. 方程\eqref{equ3.37}中，独立变量$u,v$的分离是一种巧合，这完全是由理想气体方程的特殊性所致. 这种特殊性让我们能够对方程\eqref{equ3.37}逐项积分.
+应当注意，方程\eqref{equ3.37}是逐项可积的，但例3会提到，这样的方法在更一般的情况下无法实现. 方程\eqref{equ3.37}中，独立变量$u,v$的分离是一种巧合，这完全是由理想气体方程的特殊性所致. 这种特殊性使得方程\eqref{equ3.37}可以逐项积分.
 
-两种或多种简单理想气体的混合物——“多组分简单理想气体”——可以由一个基本方程描述. 为了使方程的形式更加简单，我们可以将其写成参数形式，其中温度$T$扮演参数的角色.
+两种或多种简单理想气体的混合物——“多组分简单理想气体”——可以由一个基本方程描述. 为了使形式更加简单，基本方程写成了参数形式，其中温度$T$作为参数。
 \begin{equation}
 \label{equ3.39}
-S=\sum_j N_js_{j0}+\left(\sum_j N_jc_j\right)R\ln\frac{T}{T_0}+\sum_j N_jR\ln\left(\frac{V}{N_jv_0}\right)
-U=\left(\sum_jN_jc_j\right)RT
+\begin{split}
+    S &= \sum_j N_j s_{j0} + \left(\sum_j N_jc_j\right) R \ln \frac{T}{T_0} + \sum_j N_jR\ln\left(\frac{V}{N_jv_0}\right) \\
+    U &= \left(\sum_jN_jc_j\right)RT
+\end{split}
 \end{equation}
 将$T$从这两个方程中消去，就得到一个具有标准形式$S=S(U,V,N_1,N_2,\cdots)$的方程.
 
-观察\eqref{equ3.39}中关于某一种理想气体的项,并与该气体单独存在时的熵表达式作比较，我们可以发现一个事实(通常被称作Gibbs定理)：{\it 理想气体混合物的熵是其中每一种气体在温度为$T$下、单独占据体积$V$时的熵之和. }这个定理对所有的理想气体都成立(见第13章).
+观察\eqref{equ3.39}中关于某一种理想气体的项,并与该气体单独存在时的熵表达式作比较，可以发现如下事实(通常称作Gibbs定理)：{\it 理想气体混合物的熵是其中每一种气体在温度为$T$下、单独占据体积$V$时的熵之和. }这个定理对所有的理想气体都成立(见第13章).
 
 有趣的是，如果将方程\eqref{equ3.39}写成如下形式:
 \begin{equation}
 \label{equ3.40}
 S=\sum_jN_js_{j0}+\left(\sum_jN_jc_{j}\right)R\ln{\frac{T}{T_0}}+NR\ln{\frac{V}{Nv_0}}-R\sum_jN_j\ln{\frac{N_j}{N}}
 \end{equation}
-则最后一项可视作"混合熵".{\it 这一项代表了在同一温度和同一分子数密度($N/V=N_j/V_j$,因此压强也相同)下，诸多分开的单一组分气体的熵之和与混合气体的熵之间的差异}，见问题3.4-15. 上面这种阐述与Gibbs定理之间既有相当的差别，也有相似之处，读者应当仔细分辨. 混合熵可应用在分离同位素的问题上，我们将在\ref{sec4.4}节(例4)中进行阐述.
+则最后一项可视作“混合熵”.{\it 这一项代表了在同一温度和同一分子数密度$N_j/V_j = N/V$ （因此压强也相同）下，诸多分开的单一组分气体的熵之和与混合气体的熵之间的差异}，见问题3.4-15. 上面这种阐述与Gibbs定理之间既有相当的差别，也有相似之处，读者应当仔细分辨. 混合熵可应用在分离同位素的问题上，我们将在\ref{sec4.4}节(例4)中进行阐述.
 
-一个简单的“思想实验”就能简洁地证明Gibbs定理. 某圆柱体(图\ref{fig3.2})体积为$2V_0$，用3个固隔板将其分成4个小室(分别用$\alpha,\beta,\gamma,\delta$来记)，其中一个隔板固定在圆柱中心，两个可滑动的隔板在中心两边. 两边的两个隔板被链在一起，以保证它们之间的距离恒为圆柱长的一半(因此$V_\alpha=V_\gamma, V_\beta=V_\delta$). 最开始，两个滑动隔板分别在圆柱左边和圆柱中心，因此$V_\alpha=V_\gamma=0$. 此时小室$\beta$体积为$V_0$，其中充有$N_0$  mole理想气体A和$N_0$ mole的理想气体B的混合物. 而且小室$\delta$是真空的，整个系统的温度为$T$.
+一个简单的“思想实验”就能简洁地证明Gibbs定理. 某圆柱体(图\ref{fig3.2})体积为$2V_0$，用3个隔板将其分成4个小室(分别用$\alpha,\beta,\gamma,\delta$来记)，其中一个隔板固定在圆柱中间，两个可滑动的隔板在中心两边. 两边的两个隔板被链在一起，以保证它们之间的距离恒为圆柱长的一半(因此$V_\alpha=V_\gamma, V_\beta=V_\delta$). 最开始，两个滑动隔板分别在圆柱左边和圆柱中心，因此$V_\alpha=V_\gamma=0$. 此时小室$\beta$体积为$V_0$，其中充有$N_0$  mole理想气体A和$N_0$ mole的理想气体B的混合物. 而且小室$\delta$是真空的，整个系统的温度为$T$.
 
 \begin{figure}
 \centering
 \includegraphics[width=.5\textwidth]{Pictures/fig3.2.png}
-\figcaption{分离混合理想气体，用以展示 Gibbs 定理。}
+\figcaption{分离混合理想气体，用以证明 Gibbs 定理。}
 \label{fig3.2}
 \end{figure}
 
@@ -314,13 +315,13 @@ S=\sum_jN_js_{j0}+\left(\sum_jN_jc_{j}\right)R\ln{\frac{T}{T_0}}+NR\ln{\frac{V}{
 
 然后，这两块链在一起的滑动隔板被向右准静态地推动，直至$V_\beta=V_\delta=0$且$V_\alpha=V_\gamma=V_0$. 此时小室$\alpha$中为纯的气体A，小室$\gamma$中为纯气体B. 最开始体积为$V_0$的混合物被分成了两种纯气体，每种纯气体的体积都为$V_0$. 假如Gibbs定理成立，则系统终态的熵应该等于最开始的熵，接下来可以看到，上面的思想实验证实了这个论断.
 
-需要指出，\eqref{equ3.39}中的第二个方程说明能量仅是温度$T$与mole数的函数，这就确保系统终态的能量等于始态的能量. 因此$-T\Delta S$等于移动两个链在一起的滑动隔板所做的功.
+需要指出，\eqref{equ3.39}中的第二个方程说明能量仅是温度$T$与摩尔数的函数，这就确保系统终态的能量等于始态的能量. 因此$-T\Delta S$等于移动两个链在一起的滑动隔板所做的功.
 
 气体A可以自由通过左边的隔板，因此在准静态过程中，小室$\alpha$中的A气体与小室$\beta$中的A气体达到平衡，二平衡条件是$\mu_{A,\alpha}=\mu_{A,\beta}$. 小室$\beta$和小室$\gamma$中的B气体也有类似的关系.习题3.4-14会证明由$\mu_{A,\alpha}=\mu_{A,\beta}$和$\mu_{B,\beta}=\mu_{B,\gamma}$可以推出
 \begin{equation*}
 P_\alpha=P_\gamma \qquad P_\beta=2P_\alpha
 \end{equation*}
-这就是说，作用在相链结的两块滑动板上的总压力$P_\alpha-P_\beta+\Phi_\gamma$(当然应该乘上作用面积S，不过在这里，两边的S都相等)为0. 因此移动滑板不需要做功，所以该过程中就没有熵变. 最开始体积为$V_0$的A、B混合物之熵，与纯体积都为$V_0$的纯气体A、B的熵是相等的. 这就是Gibbs定理.
+这就是说，作用在相链结的两块滑动板上的总压力$P_\alpha-P_\beta+ P_\gamma$(当然应该乘上作用面积S，不过在这里，两边的S都相等)为0. 因此移动滑板不需要做功，所以该过程中就没有熵变. 最开始体积为$V_0$的A、B混合物之熵，与纯体积都为$V_0$的纯气体A、B的熵是相等的. 这就是Gibbs定理.
 
 最后，需要指出，本节中所考虑的简单理想气体是一般气体的一种特殊情况，现实中，很多气体在压强很小或适中的情况下都可以视作简单理想气体. 与简单理想气体相同，一般理想气体的(力学)状态方程也是$PV=NRT$，其内能也是温度的函数，但不再是线性的了. 一般的理想气体会在第13章中讨论，而利用统计力学推导基本方程的方法会现身于第16章.
 
@@ -532,7 +533,7 @@ Gibbs-Duhem关系为
     SdT - VdP + IdB_e + Nd\mu = 0.
 \label{equ3.65}
 \end{equation}
-磁系统的特性体现在移除限制之后子系统的平衡态条件（有关讨论见\ref{sec2.7}, \ref{sec2.8}节）上。人们发现无法控制磁矩；{\it 实验中的磁矩总是不可控制的！}作用于样品的磁场{\it 可以}控制（就像改变压强那样），因而可以通过调控磁场使样品磁矩达到某个想要的值，甚至还可以不断调整磁场以使得磁矩保持不变——就像通过反馈装置调整气压以使体积不变那样。但与通过刚性壁来保持体积不变不同，{\it 不存在但限制磁矩不变的“壁”。}
+磁系统的特性体现在移除限制之后子系统的平衡态条件（有关讨论见\ref{sec2.7}, \ref{sec2.8}节）上。人们发现无法控制磁矩；{\it 实验中的磁矩总是不可控制的！}作用于样品的磁场{\it 可以}控制（就像改变压强那样），因而可以通过调控磁场使样品磁矩达到某个想要的值，甚至还可以不断调整磁场以使得磁矩保持不变——就像通过反馈装置调整气压以使体积不变那样。但与通过刚性壁来保持体积不变不同，{\it 不存在限制磁矩不变的“壁”。}
 
 尽管磁矩不可控制，热力学理论仍可应用于磁系统，基本方程、状态方程、Gibbs-Duhem关系、Euler关系仍然成立。磁矩的不可控制性看成是“单纯的实验疑难”就好了，它对热力学理论无重大影响。
 
@@ -550,71 +551,71 @@ Gibbs-Duhem关系为
 
 \section{摩尔热容与其他导出量}
 \label{sec3.9}
-我们已经看到基本方程中的一阶微分具有重要的物理意义. 而不少二阶微分描述了物质性质，在物理上更易于引起关注，因此我们将考察一些特别的二阶微分量并阐述其作用. 之后，在第\ref{chap7}章中，我们将以一种更规整的结构回过头来学习这些二阶微分量，在那里你会看到只有很小一部分二阶微分是独立的，其他的都可以通过一种自成体系的“约化规则”与这些独立量相关联. 对于不考虑磁作用的简单系统，基本的微分量(诸多其他的微分量与这些基本的量相关)只有三组.
+我们已经看到基本方程中的一阶导数具有重要的物理意义. 而不少二阶微分描述的物质性质，在物理上更易于引起关注，因此本节将考察一些特别的二阶微分量并阐述其作用. 之后的第\ref{chap7}章将以一种更规整的结构回过头来讲述这些二阶微分量，在那里你会看到只有很小一部分二阶微分是独立的，其他的都可以通过一种自成体系的“约化规则”与这些独立量相关联. 对于不考虑磁作用的简单系统，基本的微分量(其他的微分量与这些基本的量相关)只有三个.
 
 {\it 热膨胀系数(coefficient of thermal expansion)}\mpar{即定压膨胀系数}定义为
 \begin{equation}
 \label{equ3.67}
-\alpha=\frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_P=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P
+\alpha \equiv \frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_P=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P
 \end{equation}
 它描述了系统压强恒定(组分的摩尔数也恒定)的情况下，增加一个单位温度后，系统体积的相对增量.
 
 {\it 等温压缩系数(isothermal compressibility)}定义为
 \begin{equation}
 \label{equ3.68}
-\kappa_T\equiv-\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_T=\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T
+\kappa_T\equiv-\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_T= -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T
 \end{equation}
 它描述了系统温度恒定(组分的摩尔数也恒定)的情况下，增加一个单位压强后，系统体积的相对增量.
 
 {\it 摩尔定压热容系数(molar heat capacity at constant pressure)}定义为
 \begin{equation}
 \label{equ3.69}
-c_P=T\left(\frac{\partial s}{\partial T}\right)_P=\frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_P=\frac{1}{N}\left(\frac{\dbar Q}{\text{d}T}\right)_P
+c_P \equiv T\left(\frac{\partial s}{\partial T}\right)_P=\frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_P=\frac{1}{N}\left(\frac{\dbar Q}{\text{d}T}\right)_P
 \end{equation}
 它描述了系统压强恒定(组分的摩尔数也恒定)的情况下，让体系的温度增加一个单位所需的热量.
 
-对于组分的摩尔数恒定的系统，其他的二阶微分量都可以由这三个来表示，所以这三个量在不同压强和温度下的值常被人们制成表格.
+对于摩尔数恒定的系统，其他的二阶微分量都可以由这三个来表示，所以这三个量在不同压强和温度下的值经常制成表格.
 
-二阶微分量之间的关系怎么导出？原则上，我们可以这样想（更完整的表述在第\ref{chap7}章中）.最简单的关系也许是：
+二阶微分量之间的关系怎么导出？原则上的依据是二阶混合导数不依赖于求导顺序（更完整的表述见第\ref{chap7}章）。例如最简单的关系：
 \begin{equation}
 \label{equ3.70}
 \left(\frac{\partial T}{\partial V}\right)_{S,N}=-\left(\frac{\partial P}{\partial S}\right)_{V,N}
 \end{equation}
-由微积分的基本知识可知，$U$对$S,V$的二阶混合偏导数相等
+可以通过$U$对$S,V$的二阶混合偏导数相等
 \begin{equation}
 \label{3.71}
 \frac{\partial}{\partial V}\left(\frac{\partial U}{\partial S}\right)=\frac{\partial}{\partial S}\left(\frac{\partial U}{\partial V}\right)
 \end{equation}
-由此即得\eqref{equ3.70}
+来导出。
 
-\eqref{equ3.70}中的两个（二阶微分）量具有很直观的物理意义，而且都可被直接测量. $\left(\frac{\partial T}{\partial V}\right)_{S_N}$对应绝热过程中温度随体积的变化率；而$-\left(\frac{\partial P}{\partial S}\right)_{V,N}$可以写作$T\left(\frac{\text{d} P}{\dbar Q}\right)_{V,N}$则是压强与输入系统的热量$\text{d}Q$之比（在体积不变的情况下）.这两个看起来毫无关系的量被联系在了一起，这是很不简单的结果，实际上，这是热力学理论的第一次“胜利”. 毫无疑问，实验结果也支持这个等式.
+\eqref{equ3.70}中的两个（二阶微分）量具有很直观的物理意义，而且都可以直接测量. $\left(\frac{\partial T}{\partial V}\right)_{S, N}$对应绝热过程中温度随体积的变化率；而$\left(\frac{\partial P}{\partial S}\right)_{V,N}$可以写作$T\left(\frac{\text{d} P}{\dbar Q}\right)_{V,N}$，它是压强与（恒容条件下）传入系统的热量$\dbar Q$之比。两个看起来毫无关系的量被联系在了一起，这是很不寻常的结果，实际上，这是热力学理论的第一次“胜利”. 毫无疑问，实验结果也支持这个等式.
 
 \eqref{equ3.70}在熵表象下的表达式为：
 \begin{equation}
 \label{equ3.72}
 \frac{\partial }{\partial V}\left(\frac{1}{T}\right)_{U,N}=\frac{\partial }{\partial U}\left(\frac{P}{T}\right)_{V,N}
 \end{equation}
-我们马上就可以发现，这个就是我们在\eqref{equ3.46}中为了求van der Waals方程对应的热状态方程所引入的等式.
+马上就会发现，这个就是\eqref{equ3.46}式中为了求van der Waals方程对应的热状态方程所引入的等式.
 
-在第\ref{chap7}章中，我们将看到，这些等式实际上就是一类很普遍的类似关系（被称作Maxwell关系）\mpar{原文“analogous relationship”}的原型.Maxwell关系以简洁的形式将两个二阶微分量联系在一起，实际上，Maxwell关系是一个更加普适的定理的退化形式，该定理表明，任意{\it 四}个微分量之间必然有一个关系.这些关系让我们能将任意一个二阶微分量用“基本集”\mpar{所谓基本集，就是由$c_p,\alpha,\kappa_T$这些既基础且有明确物理意义的量组成的集合——译者注.}中的元素$c_p,\alpha,\kappa_T$表示出来(在恒定$N$的情况下).
+在第\ref{chap7}章中，我们将看到，这些等式实际上就是一类很普遍的关系（称作Maxwell关系）的原型. Maxwell关系以简洁的形式将两个二阶微分量联系在一起，实际上，Maxwell关系是一个更加普适的定理的退化形式，该定理表明，任意{\it 四}个微分量之间必然有一个关系.这些关系可以将任意一个二阶微分量用“基本集”\mpar{所谓基本集，就是由$c_p,\alpha,\kappa_T$这些既基础且有明确物理意义的量组成的集合}中的元素$c_p,\alpha,\kappa_T$表示出来(在$N$恒定的情况下).
 
-为了阐明这些预想的关系，我们先额外引入两个具有实际意义的二阶微分量；绝热压缩率$\kappa_S$\mpar{关于此处$S$的大小写，原文如此。}和定压摩尔热容$c_v$.
+为了阐明这些预想的关系，我们先额外引入两个具有实际意义的二阶微分量：绝热压缩率$\kappa_s$和定容摩尔热容$c_v$.
 
-$\it{绝热压缩率 (isomethermal compressibility)}$定义如下：
+{\it 绝热压缩率 (isomethermal compressibility)} $\kappa_s$定义如下：
 \begin{equation}
 \label{equ3.73}
 \kappa_s=-\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_s=-\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_S
 \end{equation}
 它表征了熵恒定的情况下（比如绝热系统），体积在压强变化时的下降率.
 
-$\it{定压摩尔热容 (molar heat capacity at constant pressure)}$定义如下：
+{\it 定容摩尔热容 (molar heat capacity at constant volume)}$c_v$ 定义如下：
 \begin{equation}
 \label{equ3.74}
 c_v=T\left(\frac{\partial s}{\partial T}\right)_v=\frac{T}{N}\left(\frac{\partial S}{\partial T}\right)_V=\frac{1}{N}\left(\frac{\dbar Q}{\text{d}T}\right)_V
 \end{equation}
-它表征了恒容准静态过程中，体系中一摩尔物质的温度每升高一度所需要的热量（也就是热量除以体系的物质的量）.
+它表征了恒容准静态过程中，体系中一摩尔物质的温度每升高一单位所需要的热量.
 
-在第\ref{chap7}章中，我们会证明
+第\ref{chap7}章会证明
 \begin{equation}
 \label{equ3.75}
 c_P=c_v+\frac{TV\alpha^2}{N\kappa_T}
@@ -624,17 +625,17 @@ c_P=c_v+\frac{TV\alpha^2}{N\kappa_T}
 \label{equ3.76}
 \kappa_T=\kappa_S+\frac{TV\alpha^2}{Nc_P}
 \end{equation}
-再次强调，这里我们并不需要将注意力放在\eqref{equ3.75}\eqref{equ3.76}这两个式子的的细节上，而是要引起读者对三个基本量$c_p;\alpha;\kappa_T$的注意，通过这三个基本量，我们可以将所有其他的微分量表示出来（比如$c_v;\kappa_S$），因此这三个基本量关于$T,P$的函数常被列作表格以资查阅利用.如何更加系统地导出这些等式？如何方便的记忆它们？我们将在第\ref{chap7}章详细介绍.
+再次强调，这里并不需要将注意力放在\eqref{equ3.75}\eqref{equ3.76}这两个式子的的细节上，而是要引起对三个基本量$c_p;\alpha;\kappa_T$的注意，这三个基本量可以将所有其他的微分量表示出来（比如$c_v;\kappa_S$），因此这三个基本量关于$T,P$的函数常被列作表格以资查阅利用. 如何更加系统地导出这些等式？如何方便的记忆它们？这些将在第\ref{chap7}章详细介绍.
 
 推荐学生做做习题3.9-6.
 \begin{example}
-一种物质的$c_p,\alpha,\kappa_T$关于$T,P$的函数已被做成表格（即已知它们关于$T,P$的函数）.试找出摩尔体积$v$关于$T,P$的函数
-\texttt{解答}
-我们在$T-P$平面上考虑问题. $c_p,\alpha ,\kappa_T$关于$T,P$的函数值在全平面上都已知，然后我们试图寻找$v(T,P)$的表达式，首先
-\begin{align}
+一种物质的$c_P,\alpha,\kappa_T$关于$T,P$的函数已被做成表格（即已知它们关于$T,P$的函数）.试找出摩尔体积$v$关于$T,P$的函数
+
+\paragraph{解答} 我们在$T-P$平面上考虑问题. $c_p,\alpha ,\kappa_T$关于$T,P$的函数值在全平面上都已知，然后我们试图寻找$v(T,P)$的表达式，首先
+\begin{align*}
 \text{d}v&=\left(\frac{\partial v}{\partial P}\right)_T\ \text{d}P+\left(\frac{\partial v}{\partial T}\right)_P\ \text{d}T\\
 &=-v\kappa_T\ \text{d}P+v\alpha\ \text{d}T
-\end{align}
+\end{align*}
     或
 \[\frac{\text{d}v}{v}=-\kappa_T\ \text{d}P+\alpha\ \text{d}T\]
 如果选$(T_0,P_0)$为参考点，且$(T^\prime,P^\prime)$是我们感兴趣的点，那么我们按照图示的路径进行积分（或者你可以选择任意一条合适的路径）.对于我们选定的这个路径而言，在它的水平段上，$\text{d}T=0$，在它的竖直段上，$\text{d}P=0$，因此

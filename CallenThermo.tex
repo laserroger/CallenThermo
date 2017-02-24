@@ -58,6 +58,11 @@
 \SetWatermarkScale{0.4}
 \usepackage{setspace}
 \usepackage{marginfix}
+\usepackage{tabularx}
+
+\newenvironment{mymath}{$}{
+	\quad\refstepcounter{equation}(\theequation)$
+}
 
 \usepackage{xypic}
 \def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J

@@ -1,6 +1,7 @@
+%!TEX root = ../CallenThermo.tex
 %----------------------------------------------------------------------------------------
 %	翻译：SI
-%   校对：未校对！
+%   校对：lh1962
 %----------------------------------------------------------------------------------------
 
 \chapter{平衡条件}
@@ -8,7 +9,7 @@
 
 \section{强度量}
 \label{sec2.1}
-无论出于实际还是理论需要，基本方程的微分形式总是有用的。将基本方程写为
+基于对过程中广延量相应变化的兴趣，我们希望能对基本方程的微分形式进行研究。将基本方程写为
 \begin{equation}
 \label{equ2.1}
 	U = U(S, V, N_1, \dots, N_r).
@@ -38,22 +39,22 @@
 
 电化学势通常简称为{\it 化学势 (chemical potential)}，这两个词语我们都采用\footnote{注意，有些情形（特别是固体理论领域）的“化学势”定义为电化学势$\mu$减去分子静电能量。}。
 
-根据\eqref{equ1.1}式，\eqref{equ2.6}式的$-P dV$项即为（外界对系统做的）准静态功$\delta W_M$。
+根据\eqref{equ1.1}式，\eqref{equ2.6}式的$-P dV$项即为（外界对系统做的）准静态功$\dbar W_M$。
 
 摩尔数不变的情况下，\eqref{equ2.6}式化为
 \begin{equation}
 \label{equ2.7}
-	T dS = dU - \delta W_M, \quad \text{若}dN_1 = dN_2 = \dots = dN_r = 0.
+	T dS = dU - \dbar W_M, \quad \text{若}dN_1 = dN_2 = \dots = dN_r = 0.
 \end{equation}
 
-利用准静态过程热流的定义\mpar{$\delta Q \equiv dU - \delta W.$}，或者比较\eqref{equ2.7}式与\eqref{equ1.2}式可得，$TdS$即为准静态热流：
+利用准静态过程热流的定义\mpar{$\dbar Q \equiv dU - \dbar W.$}，或者比较\eqref{equ2.7}式与\eqref{equ1.2}式可得，$TdS$即为准静态热流：
 \begin{equation}
 \label{equ2.8}
-	\delta Q = TdS.
+	\dbar Q = TdS.
 \end{equation}
-{\it 流入系统的准静态热流与系统熵的增加相联系。}\mpar{原文：{\it quasi-static flux of heat into a system is associated with an increase of entropy of that system.} }
+{\it 流入系统的准静态热流贡献了其一部分熵增。}
 
-\eqref{equ2.6}式余下的一项与系统加入物质后的内能变化有关。这种能量流动在热力学之外很少讨论（尽管容易想象），因而没有通用的名字。我们称$\sum_j \mu_j dN_j$为{\it 准静态化学功 (quasi-static chemical work)}，记作$\delta W_c$:
+\eqref{equ2.6}式余下的一项与系统加入物质后的内能变化有关。这种能量流动在热力学之外很少讨论（尽管容易想象），因而没有通用的名字。我们称$\sum_j \mu_j dN_j$为{\it 准静态化学功 (quasi-static chemical work)}，记作$\dbar W_c$:
 \begin{equation}
 \label{equ2.9}
 	\delta W_c \equiv \sum_{j = 1}^r \mu_j dN_j.
@@ -107,7 +108,7 @@
 \label{equ2.18}
 	dU = TdS + \sum_{j = 1}^t P_j dX_j.
 \end{equation}
-注意\eqref{equ2.4}式有负号，但\eqref{equ2.17}式没有。按照热力学的体系，与强度量$T, \mu_j$地位相同的量是{\it 压强的$-1$倍\mpar{负号的麻烦源于压强$P$是力学中早已定义好了的。} }：$-P$，\eqref{equ2.17}式中某个$P_j$代表的是$-P$.
+注意\eqref{equ2.4}式有负号，但\eqref{equ2.17}式没有。按照热力学的体系，与强度量$T, \mu_j$地位相同的量是{\it 负压强\mpar{麻烦源于压强$P$是力学中早已定义好了的。} }：$-P$，\eqref{equ2.17}式中某个$P_j$代表的是$-P$.
 
 对于单组分简单系统，各方程经常用单位摩尔数的物理量表示。类似\eqref{equ1.11}与\eqref{equ1.15}式的关系那样，单位摩尔数的内能为
 \begin{equation}
@@ -319,7 +320,7 @@ $F_k$与\eqref{equ2.16}、\eqref{equ2.17}式定义的偏导数$P_j$当然有关�
 
 \section{热平衡态——温度}
 \label{sec2.4}
-下面讨论关于熵的极值原理的一些interesting的东西。考虑一个封闭的简单复合系统，它的两个子系统由固定且不可透过物质的透热壁分隔，因此子系统的体积与摩尔数恒定，但内能$U^{(1)}, U^{(2)}$可变，复合系统的封闭性要求
+下面讨论关于熵的极值原理的一些有趣的应用。考虑一个封闭的简单复合系统，它的两个子系统由固定且不可透过物质的透热壁分隔，因此子系统的体积与摩尔数恒定，但内能$U^{(1)}, U^{(2)}$可变，复合系统的封闭性要求
 \begin{equation}
 \label{equ2.30}
 	U^{(1)} + U^{(2)} = \text{常数}.
@@ -394,14 +395,16 @@ $U^{(1)}, U^{(2)}$的微小变化造成熵的变化为
 \label{equ2.42}
 	\Delta U^{(1)} < 0.
 \end{equation}
-这意味着热量从系统1传递到系统2。由此推论热量从温度{\it 高}的系统流向温度{\it 低}的系统。这再次与温度的直观概念相符。应该注意，这个结论不依赖于$T^{(1)}, T^{(2)}$相差很小的假设，这个假设只是为了计算简明，一般情况进行积分即可。
+这意味着热量{\it 从}系统1传递{\it 到}系统2。由此推论热量{\it 从}温度{\it 高}的系统流{\it 向}温度{\it 低}的系统。这再次与温度的直观概念相符。应该注意，这个结论不依赖于$T^{(1)}, T^{(2)}$相差很小的假设，这个假设只是为了计算简明，一般情况进行积分即可。
 
 基于生理学冷热的温度的直观概念有两个基本特征。第一，温度是强度量，系统部分与整体的温度相等。第二，热量从高温系统向低温系统传递。这些特征要求平衡状态下温度相等且具有均匀性。温度的定量定义符合上述要求。
 
 
 \section{温度单位}
 \label{sec2.6}
-温度的单位是能量单位除以熵的单位，熵的单位尚未指定，实际上熵的单位怎样都可以。因为熵乘以任意有量纲常量所得具有新量纲的函数满足同样的极值原理——因此与熵等价。为了消除这个任意性，我们指定熵是无量纲的\mpar{从后面的统计力学的角度可见这个选择非常具有物理意义。}。因而温度的量纲与能量相同。注意，就像力矩和功量纲相同但性质不同、单位也不同\mpar{力矩：牛顿·米 (\si{N} $\cdot$ \si{m})，功：焦 (\si{J})}那样，温度与能量也要清楚区分。能量与温度的{\it 量纲 (dimensions)}都是$[\text{质量} \cdot (\text{长度})^2 / (\text{时间})^2].$能量的{\it 单位 (units)}是焦耳、尔格和卡路里什么的。温度的单位下面讨论。
+温度的单位是能量单位除以熵的单位，熵的单位尚未指定，实际上熵的单位怎样都可以。因为熵乘以任意有量纲常量所得具有新量纲的函数满足同样的极值原理——因此与熵等价。为了消除这个任意性，我们指定熵是无量纲的\mpar{从后面的统计力学的角度可见这个选择非常具有物理意义。}。因而温度的量纲与能量相同。注意，就像力矩和功量纲相同但性质不同、单位也不同\mpar{力矩：牛顿·米 (\si{\newton\meter})，功：焦 (\si{\joule})}那样，温度与能量也要清楚区分。能量与温度的{\it 量纲 (dimensions)}都是$[\text{质量} \cdot (\text{长度})^2 / (\text{时间})^2].$能量的{\it 单位 (units)}是焦耳、尔格和卡路里什么的。温度的单位下面讨论%
+\mpar{需要注意的是，对物理量量纲和单位的理解并不是唯一的。另一种常见的理解是，单位只是用以描述具有某种量纲的物理量时所必须的一个结构原件，即“数-单位”，并不承载其所描述的物理量的具体性质。具有相同量纲的单位一定可以相互替代，比如文中提到的\si{\newton\meter}和\si{\joule}，或\si{\joule}和\si{\kelvin}。}%
+。
 
 第4章会介绍Carnot热机，那里会证明一台与两个热力学系统接触而做功的热机的最大效率由两系统温度的比值完全确定。因此{\it 热力学理论提供了测量任意两个热力学系统温度比值的实验方法}。
 
@@ -411,43 +414,43 @@ $U^{(1)}, U^{(2)}$的微小变化造成熵的变化为
 
 不同标准状态的不同钦点温度造成了不同的热力学温标，但是所有热力学温标在$T = 0$处都是一致的。此外，根据\eqref{equ1.7}式，系统的温度不能低于$0$。热力学温度内禀的非负性与所有观测高度一致。
 
-国际单位制(Système International (SI) system)中的温标为Kelvin温标，指定纯水、冰与水蒸气的三相平衡态的温度为$273.16$，该参考状态称为“三相点(triple points)”。相应的温度单位称为kelvin，记作$\si{K}$.
+国际单位制(Système International (SI) system)中的温标为Kelvin温标，指定纯水、冰与水蒸气的三相平衡态的温度为$273.16$，该参考状态称为“三相点(triple points)”。相应的温度单位称为kelvin，记作$\si{\kelvin}$.
 
-同一量纲的两个单位——kelvin与joule（焦耳）之间的比值为$1.3806 \times 10^{-23} \,\mathrm{joule\ kelvin^{-1}}$. 这个比值称为Boltzmann常数，记作$k_B$，因此$k_B T$是一个能量值。
+同一量纲的两个单位——kelvin与joule（焦耳）之间的比值为\SI{1.3806e-23}{\joule\per\kelvin}. 这个比值称为Boltzmann常数，记作$k_\text{B}$，因此$k_\text{B} T$是一个能量值。
 
-Rankine 温标将水的三相点温度钦点为$\frac{9}{5} \times 273.16 = 491.688^\circ \mathrm{R}$。Kelvin温度乘以$\frac{9}{5}$就等于Rankine温度。
+Rankine 温标将水的三相点温度钦点为$\frac{9}{5} \times 273.16 = \SI{491.688}{\degreeR}$。Kelvin温度乘以$\frac{9}{5}$就等于Rankine温度。
 
-实际应用的“{\it 国际Kelvin温标}”与上文的“绝对”Kelvin温标关系密切，国际Kelvin温标在不同的温度范围利用特定系统分别进行定义，并且保证与（绝对）Kelvin温标尽量接近。它的优点是提供不同范围内可重复的温度测量实验标准。然而从热力学观点看，它并非真实的热力学温标，因为它与Kelvin温标稍有偏差，使得温度之比不符合热力学理论。
+实际应用的“{\it 国际Kelvin温标}”与上文的“绝对”Kelvin温标关系密切，国际Kelvin温标在不同的温度范围利用特定系统分别进行定义，并且保证与（绝对）Kelvin温标尽量接近。它的优点是提供了不同温度区间内可重复的温度测量实验标准。然而从热力学观点看，它并非真实的热力学温标，因为它与Kelvin温标稍有偏差，使得温度之比不符合热力学理论。
 
-日常生活中的温度无论用Kelvin还是Rankine温标表示数值都很大。例如室温大约是$\SI{300}{K}$或$540^\circ\mathrm{R}$. 因此为了方便，人们又定义了两种衍生温标。Celsius温标\mpar{通译为摄氏温标，本文统一采用英文名称。}定义为
+日常生活中的温度无论用Kelvin还是Rankine温标表示数值都很大。例如室温大约是\SI{300}{\kelvin}或\SI{540}{\degreeR}. 因此为了方便，人们又定义了两种衍生温标。Celsius温标\mpar{通常译为摄氏温标，本文统一采用英文名称。}定义为
 \begin{equation}
 \label{equ2.43}
-	T(\ ^\circ \mathrm{C}) = T(K) - 273.15.
+	T(\si{\degreeCelsius}) = T(K) - 273.15.
 \end{equation}
-其中$T(\ ^\circ \mathrm{C})$称为“Celsius温度”\mpar{通译为摄氏温度。}，单位称为“{\it Celsius度} （摄氏度）”，记作$\ ^\circ \mathrm{C}$. Celsius温标的零点不同于热力学温度的零点，因此{\it Celsius温标不是热力学温标}。存在零下的Celsius温度，零Celsius度可以达到，Celsius温度的比值不符合热力学理论。只有Celsius温度差才有热力学意义。
+其中$T(\si{\degreeCelsius})$称为“Celsius温度”\mpar{通常译为摄氏温度。}，单位称为“{\it Celsius度} （摄氏度）”，记作(\si{\degreeCelsius}. Celsius温标的零点不同于热力学温度的零点，因此{\it Celsius温标绝不是热力学温标}。存在零下的Celsius温度，零Celsius度可以达到，Celsius温度的比值不符合热力学理论。只有Celsius温度差才有热力学意义。
 
-根据定义，水的三相点的温度为$0.01^\circ \mathrm{C}$。压强保持$\SI{1}{atm}$不变的冰水混合物系统温度更接近$0^\circ \mathrm{C}$，小数点后第三位才非零。$\SI{1}{atm}$下沸腾的水温度非常接近$100^\circ \mathrm{C}$. 这两个巧合源自Celsius温标的历史进程\footnote{这方面的历史可见E. R. Jones, Jr., The Physics Teacher 18, 594 (1980). }。在意识到温度的零点唯一之前，人们确定温标需要指定两个特定温度（而非一个）。Anders Celsius在1742年将$0^\circ \mathrm{C}, 100^\circ \mathrm{C}$指定为上述两个状态。
+根据定义，水的三相点（冰、水及水蒸气混合物处于平衡态）的“温度”为\SI{0.01}{\degreeCelsius}。压强保持\SI{1}{atm}不变的冰水混合物系统温度更接近\SI{0}{\degreeCelsius}，小数点后第三位才非零。\SI{1}{atm}下沸腾的水温度非常接近\SI{100}{\degreeCelsius}. 这两个巧合源自Celsius温标的历史进程\footnote{这方面的历史可见E. R. Jones, Jr., The Physics Teacher 18, 594 (1980). }。在意识到温度的零点唯一之前，人们确定温标需要指定两个特定温度（而非一个）%
+\mpar{这个断言并不完整。为了准确测定温度，我们不止需要指定温度的特殊点，还需要指定测温物质和测温属性。例如，单纯利用物体的热膨胀测温，那么水银温度计和酒精温度计将会给出不同的温度结果。而热力学温标与测温物质无关的特性，使得它在物理中被广泛运用。}%
+。Anders Celsius在1742年将\SI{0}{\degreeCelsius}，\SI{100}{\degreeCelsius}指定为上述两个状态。
 
 实践中常用的还有Fahrenheit温标\mpar{通译为华氏温标。}，定义为
 \begin{equation}
 \label{equ2.44}
-	T(\ ^\circ \mathrm{F}) \equiv T(\ ^\circ\mathrm{R}) - 459.67 = \frac{9}{5} T(\ ^\circ \mathrm{C}) + 32.
+	T(\si{\degreeF}) \equiv T(\si{\degreeR}) - 459.67 = \frac{9}{5} T(\si{\degreeCelsius}) + 32.
 \end{equation}
-$\SI{1}{atm}$下冰水混合物的Fahrenheit温度大约是$32^\circ\mathrm{F}$. $\SI{1}{atm}$下沸水约为$212^\circ\mathrm{F}$, 室温在$70^\circ\mathrm{F}$左右。Fahrenheit温标的“巧合”在于$\SI{1}{atm}$下冰与盐水混合物为$0^\circ \mathrm{F}$附近，奶牛的体温（直肠温度）大概是$100^\circ \mathrm{F}$.
+\SI{1}{atm}下冰水混合物的Fahrenheit温度大约是\SI{32}{\degreeF}. \SI{1}{atm}下沸水约为\SI{212}{\degreeF}, 室温在\SI{70}{\degreeF}左右。Fahrenheit温标的“巧合”在于\SI{1}{atm}下冰与盐水混合物为\SI{0}{\degreeF}附近，奶牛的体温（直肠温度）大概是\SI{100}{\degreeF}.
 
-尽管前面已经利用热力学基本关系的偏导数正式定义了温度，我们现在简要回顾引入温度概念的通常方法（由Kelvin和Caratheodory建立）。热流$\delta Q$按照前面能量守恒的方法定义。$\delta Q$乘以积分因子$1 / T$之后成为完整微分（记作$dS$）。
+尽管前面已经利用热力学基本关系的偏导数正式定义了温度，我们现在简要回顾引入温度概念的通常方法（由Kelvin和Caratheodory建立）。热流$\dbar Q$按照前面能量守恒的方法定义。考虑一个热力学循环过程，可推断出存在一个将不完整微分$\dbar Q$转换成全微分$dS$的积分因子，记做$1/T$
 \begin{equation}
 \label{equ2.45}
-	dS = \frac{1}{T} \delta Q.
+	dS = \frac{1}{T} \dbar Q.
 \end{equation}
-于是温度、熵的概念从积分因子的存在性可以导出。The temperature and the entropy thereby are introduced by analysis of the existence of integrating factors in particular types of differential equations called Pfaffian forms. 
-
-
+从而我们便从{\it Pfaffian 型}微分方程积分因子的存在性引入了温度和熵的概念。
 
 
 \section{力学平衡}
 \label{sec2.7}
-本节利用最大熵原理导出更为简单的一个结论。考虑一个封闭的复合系统，它的两个子系统由可移动的透热壁分隔\mpar{如果没有特别说明，本节的壁都是不可透过物质的。}，子系统的摩尔数是定值，但各自的内能$U^{(1)}, U^{(2)}$可以改变，系统的封闭性要求
+本节我们将通过一个更为简单的例子来阐明熵的极值原理的应用。考虑一个封闭的复合系统，它的两个子系统由可移动的透热壁分隔\mpar{如果没有特别说明，本节的壁都是不可透过物质的。}，子系统的摩尔数是定值，但各自的内能$U^{(1)}, U^{(2)}$可以改变，系统的封闭性要求
 \begin{equation}
 \label{equ2.46}
 	U^{(1)} + U^{(2)} = \text{常数}.
@@ -498,11 +501,8 @@ $\SI{1}{atm}$下冰水混合物的Fahrenheit温度大约是$32^\circ\mathrm{F}$.
 
 子系统由可移动的绝热壁（而非透热壁）分隔的情形十分微妙，我们在进一步学习热力学体系之后再来考虑，习题2.7-3初步介绍了微妙之处，习题5.1-2深入讨论。
 
-\ 
+\begin{example}
 
-{\bf 例1}
-
-\ 
 
 如图，三个圆柱体的横截面积相同，由活塞封印着一定气体（气体的组分不必相同）。活塞通过刚性杠杆连接，它们的“力臂”（即连接点到支点的距离）之比为$1 : 2 : 3$。圆柱体放置在质量可忽略的传热板上，板的唯一作用是使三个圆柱体系统可以传热，其它物理效果可忽略。整个大系统是孤立的，活塞不受外部压强影响。求平衡态下三个圆柱体的压强之比与温度之比。
 
@@ -512,7 +512,6 @@ $\SI{1}{atm}$下冰水混合物的Fahrenheit温度大约是$32^\circ\mathrm{F}$.
 	\figcaption{例2.7-1图：三个体积耦合的系统。}
 }
 
-\ 
 
 {\bf 解}
 
@@ -539,6 +538,7 @@ $\SI{1}{atm}$下冰水混合物的Fahrenheit温度大约是$32^\circ\mathrm{F}$.
 	\[ P^{(1)} + 2P^{(2)} = 3P^{(3)}. \]
 	考虑到力学中的杠杆平衡原理，上面的平衡条件在意料之中。若已知状态方程就可将上式化为三个系统体积的等式。
 }
+\end{example}
 
 \section{存在物质交换时的平衡态}
 \label{sec2.8}
@@ -581,7 +581,7 @@ $\SI{1}{atm}$下冰水混合物的Fahrenheit温度大约是$32^\circ\mathrm{F}$.
 
 \section{化学平衡}
 \label{sec2.9}
-发生化学反应的系统的热力学描述与前面的复合系统相似，它的平衡条件仍然由化学势$\mu$的方程表示——这也是化学势名字的来源。
+发生化学反应的系统的热力学描述与前面的复合系统相似，它的平衡条件仍然由化学势$\mu$的方程表示——这也是{\it 化学势}名字的来源。
 
 在化学反应过程中，系统物质组分的摩尔数发生变化，有些增加有些减少。摩尔数之间的变化关系由化学反应方程决定，例如
 \begin{equation}

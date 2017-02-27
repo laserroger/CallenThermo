@@ -197,3 +197,134 @@ Helmholtz势的变化为
 单原子分子理想气体的能量仅仅是$\frac{3}{2}NRT$，因此它在一定的温度下是个常数。
 然而，我们从热库中吸取能量并将它作为注入到可逆功源的功的事实并不违反Carnot效率原理，因为气体子系统并不处在它们的初始态上。
 除了这些子系统的能量保持恒定的事实外，它们的熵增加了。
+
+\section{焓：Joule-Thomson（节流）过程}\label{sec6.3}
+
+与恒压力库接触的复合系统的平衡态在恒定压强下焓最小。焓表示对于研究比如说直接连接到大气的绝热圆柱-活塞系统非常合适，但是这种装置并不常在实验中见到。对于像化学实验室中的开放容器中的问题，大气不仅是一个恒压库，也是热库，因此只有Gibbs表示才能把Legendre变换完全的展现出了。而类似的，有一些特别的场合只能用焓表示，我们马上就会看到。
+
+我们是如何解释焓是``潜热''实际上给了我们一个更直接的证据。从微分形式来看，
+\begin{align}\label{equ6.28}
+dH=TdS+VdP+\mu_1dN_1+\mu_2dN_2+\cdots
+\end{align}
+可以看出来，对于一个与恒压库接触的系统且有着不可渗透的壁的时候，
+\begin{align}\label{equ6.29}
+dH=\dbar Q\quad\text{(其中， }P, N_1, N_2, \cdots\text{ 是常数）}
+\end{align}
+这就是说，在常压环境且除了$S$，$V$以外的广延量保持恒定的情况下，系统得到的热就是系统的焓的增量。
+
+这个说法类似我们之前得到的关于内能的关系
+\begin{align}\label{equ6.30}
+dU=\dbar Q\quad\text{(其中， }V, N_1, N_2, \cdots\text{ 是常数）}
+\end{align}
+而且对于不同的Legendre变换都有类似的结果，熵也不必其他变量更特殊。
+
+保持系统恒压免不了对系统的加热，焓对于热转移的讨论是很有帮助的。焓也因此有的时候被称为系统的``热量''（我们这里需要再一次之处，``热''转移对应于能量的{\it 流动}，而不是归因为热力学系统的一个状态量）。
+
+为了更好地展示焓作为``潜热''的重要性，我们考虑一个恒压系统从体积$V_i$变到$V_f$的过程。由于压强恒定，热流等于焓变
+\begin{align}\label{equ6.31}
+Q_{i\to f}\equiv\int\dbar Q=H_f-H_i
+\end{align}
+如果我们知道基本方程
+\begin{align}\label{equ6.32}
+H=H(S,P,N)
+\end{align}
+那么，通过微商我们知道
+\begin{align}\label{equ6.33}
+V=\frac{\partial H}{\partial P}=V(S,P,N)
+\end{align}
+因而我们可以用$V, P, N$来表示$H$而不用熵。于是，
+\begin{align}\label{equ6.34}
+Q_{i\to f}=H(V_f,P,N)-H(V_i,P,N)
+\end{align}
+
+Joule-Thomson过程，或称为``节流''过程，是一个有很重要的实际意义的过程。此过程常被用来冷却和液化气体，被用来做低温试验时中的第二阶段的制冷机。
+
+在Joule-Thomson过程，或``Joule-Kelvin''过程（William Thomson稍后就受封为Kelvin男爵），气体从高压区域通过多孔塞到低压区域（图\ref{Fig6.2}）。多孔塞，或``节流阀''，最开始的构造是在管子中塞一团棉花。在实验室中当然现在才去更合适的玻璃纤维，而在工业使用中则一般在管中放置多孔的陶瓷端接（图\ref{Fig6.3}）。这个过程再加上一个机械泵来抽出气体并推回高压区就可以连续工作。取决于特定的条件，气体在经过节流阀的时候会被加热或者冷却。
+
+
+\begin{figure}[h]
+\includegraphics[width = .8\textwidth]{./../Pictures/fig6.2.png}
+\caption{Joule-Thomson过程的装置示意图}\label{Fig6.2}
+\end{figure}
+
+对于真实气体来说，给定初始和最终压强，温度的改变在某个温度上是正的，在其下是负的。这种从加热到冷却过程的转变温度称为{\it 反转温度}；它取决于特定的气体，并且与初始和最终压强有关。为了让节流过程起到冷却气体的作用，它必须先被冷却到转变温度一下。
+
+为了说明Joule-Thomson过程是一个等焓过程，考虑1mole气体通过节流阀。活塞（图\ref{Fig6.2}）推动气体做功$P_iv_1$，其中$v_i$是高压侧的气体摩尔体积。% comment: mol到底怎么翻？看校对的意见了
+气体从另一侧被压出吼，它对低压$P_f$区的活塞做功$P_fv_f$。通过能量守恒可以得到最后气体的摩尔能量：初始摩尔能量，加上对气体做功$P_iv_i$，减去气体对外做功$P_fv_f$
+
+\begin{figure}[htbp]
+\includegraphics[width = .8\textwidth]{./../Pictures/fig6.3.png}
+\caption{节流过程的气体液化装置示意图。泵保持一个恒定气压差（$P_{\text{高}}-P_{\text{低}}$）。球形端为高压管，其透过表面的多孔陶瓷层通到节流过程中。}\label{Fig6.3}
+\end{figure}
+
+\begin{align}\label{equ6.35}
+u_f=u_i+P_iv_i-P_fv_f
+\end{align}
+或
+\begin{align}\label{equ6.36}
+u_f+P_fv_f=u_i+P_iv_i
+\end{align}
+用摩尔焓$h$表示就是
+\begin{align}\label{equ6.37}
+h_f=h_i
+\end{align}
+
+尽管在\eqref{equ6.37}中，我们认为Joule-Thomson过程是一个等焓过程，我们其实只是说明末态的焓等于初态的焓，而对整个过程中发生了什么并不做任何推断；{\it 气体的中间态实际上是非平衡态，其焓也没法定义}。
+
+\begin{figure}[h]
+\includegraphics[width = .8\textwidth]{./../Pictures/fig6.4.png}
+\caption{氮气的等焓线（实线），温度转换曲线（粗实线），以及气液共存线。半定量的图。}\label{Fig6.4}
+\end{figure}
+
+氮气的等焓线如图\ref{Fig6.4}所示，是有顶点的上凸曲线。如果初始温度和压强再这些顶点的左侧，则节流过程将会冷却气体。如果在右侧则压强的微弱减小会加热气体（当然如果有巨大的压强差越过顶点的话就可以冷却或者加热气体）。等焓线的顶点因此就决定了转换曲线，在顶点上小的压强变化不会加热或者冷却气体。%\mpar{此曲线的得出依靠计算Joule-Thomson系数的$0$点连接起来而绘制出来，而Joule-Thomson系数为$\alpha=\left(\dfrac{\partial T}{\partial p}\right)_H$。可以看出转换曲线与等焓线的交点都是等焓线上的斜率为$0$的点。}
+
+图\ref{Fig6.4}的粗实线就是温度转换曲线，吧等焓线的顶点连接起来就行。图中还有气液平衡态的曲线。曲线下的点是液相，上面是气相。共存曲线的端点为``临界点''，在其附近``气体''和``液体''是无法分辨的，其中细节我们在第\ref{chap9}章讲述。
+
+如果节流过程中压强的改变足够小，我们可以用常规的微分来处理
+\begin{align}\label{equ6.38}
+dT=\left(\frac{\partial T}{\partial P}\right)_{H, N_1, N_2}dP
+\end{align}
+其可以用标准的测量值（$c_P, \alpha, \kappa_T$）的复杂形式表示出来，我们在第\ref{chap7}章会真的写成那种形式。现在呢可以利用数学恒等式\eqref{equA.22}
+\begin{align}\label{equ6.39}
+dT=-\left[\left(\frac{\partial H}{\partial P}\right)_T/\left(\frac{\partial H}{\partial T}\right)_P\right]dP
+\end{align}
+其中省略了下标$N_1, N_2,\cdots$，而摩尔数保持不变。然而，$dH=TdS+VdP$是常数，因此
+\begin{align}\label{equ6.40}
+dT=-\frac{T(\partial S/\partial P)_T+V}{T(\partial S/\partial T)_P}dP
+\end{align}
+分母部分是$Nc_P$，类比\eqref{equ3.62}或者\eqref{equ3.65}的``Maxwell关系''得到偏微分$(\partial S/\partial P)_T$等于$(-\partial V/\partial T)_P$（在这里利用的是Gibbs势的亮哥交叉导数）。考虑到$(\partial S/\partial P)_T=-(\partial V/\partial T)_P=-V\alpha$（即\eqref{equ3.67}）我们终于得到
+\begin{align}\label{equ6.41}
+dT=\frac{v}{c_P}(T\alpha-1)dP
+\end{align}
+这是Joule-Thomson效应的基本方程。当压强变化$dP$为负数的时候，$dT$的符号与括号里面的相反。如果$T\alpha>1$，压强的变化（在``节流过程’’中）会冷却气体。反转温度就取决于
+\begin{align}\label{equ6.42}
+\alpha T_{\text{反转}} = 1
+\end{align}
+
+对于理想气体的话热扩散系数$\alpha$等于$1/T$，因此Joule-Thomson过程中没有温度变化。所有的气体在高温和低/中压下都表现的像理想气体，其等焓线变得很``平''，如图\ref{Fig6.4}。真是气体在转变温度上下的升温降温过程我们可以从例子2中看到，并由此来估计转变温度。
+
+\subsection*{例子2}
+计算正常的气体的转变温度，假定用van der Waals方程\eqref{equ3.41}来描述
+\subsection*{答案}
+我们首先必须要计算扩散系数$\alpha$。把van der Waals方程\eqref{equ3.41}对$T$在$P$不变下作微分
+\[\alpha = \frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_P=\left[\frac{Tv}{v-b}-\frac{2a(v-b)}{Rv^2}\right]^{-1} \]
+把等式右边写成$T$和$P$的函数是不现实的。一个近似的做法是考虑到摩尔体积是在$0.02m^3$这个量级的，因此$b/v$的量级为$10^{-3}$而$a/RTv$则在$10^{-3}-10^{-4}$量级（见表3.1）。因此只保留最低级数的$b/v$和$a/RTv$就可以了。令
+\[\epsilon_1\equiv\frac{b}{v}\quad \epsilon_2\equiv\frac{a}{RTv} \]
+从而
+\[\begin{split}
+\alpha&=\left[\frac{T}{1-\epsilon_1}-\frac{2T}{v}(v-b)\epsilon_2\right]^{-1}\\
+&=\frac{1}{T}\left[\frac{1}{1-\epsilon_1}-2(1-\epsilon_1)\epsilon_2\right]^{-1}
+\end{split} \]
+而再利用\eqref{equ6.41}
+\[dT=\frac{v}{c_P}(T\alpha-1)dP \]
+而同时有
+\[T_{\text{反转}}\alpha=1 \]
+我们从而得到转变温度时
+\[[1-\epsilon_1+2\epsilon_2+\cdots]=1 \]
+或者说
+\[\epsilon_1=2\epsilon_2 \]
+反转温度即为
+\[T_{\text{反转}}\simeq\frac{2a}{bR} \]
+气体在$T_{\text{反转}}$之下则被制冷，之上则被加热。从表3.1中，我们可以计算一些气体的反转温度：$T_{\text{反转}}(\mathrm{H})_2=224$K，$T_{\text{反转}}(\mathrm{Ne})=302$K，$T_{\text{反转}}(\mathrm{N})_2=850$K，$T_{\text{反转}}(\mathrm{O})_2=1020$K，$T_{\text{反转}}(\mathrm{CO})_2=2260$K。经验上来看，反转温度与压强息息相关——在我们这里的计算中那些被忽略的高阶项们。H$_2$的零压反转温度为$204$K，而氖则是$228$K——这与我们的粗犷的计算是符合的相当好的。对于多原子气体就符合的不那么好了，CO$_2$的测量值为$1275$K而我们计算的结果是$2260$K。
+
+

@@ -24,7 +24,10 @@
 \newcommand\cirfootnote{\ding{\numexpr171+\value{footnote}}}
 \usepackage{ctex,amsmath}
 \usepackage{mathrsfs}
-\usepackage{siunitx}
+\usepackage[per-mode=symbol,inter-unit-product=\ensuremath{{}\cdot{}}]{siunitx}
+\DeclareSIUnit[number-unit-product=\,]\degreeF{\degree F}
+\DeclareSIUnit[number-unit-product=\,]\degreeR{\degree R}
+\DeclareSIUnit[number-unit-product=\,]\calorie{cal}
 \usepackage{cancel}
 \usepackage{bm}
 \usepackage{amssymb}
@@ -55,6 +58,11 @@
 \SetWatermarkScale{0.4}
 \usepackage{setspace}
 \usepackage{marginfix}
+\usepackage{tabularx}
+
+\newenvironment{mymath}{$}{
+	\quad\refstepcounter{equation}(\theequation)$
+}
 
 \usepackage{xypic}
 \def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J
@@ -87,8 +95,8 @@
 \newcommand\pUpV{ \left( \frac{\partial U}{\partial V} \right) }
 \newcommand\pupv{ \left( \frac{\partial u}{\partial v} \right) }
 \newcommand\pUpN{ \left( \frac{\partial U}{\partial N} \right) }
-
-
+\newcommand{\dbar}{\mathrm d\hspace*{-0.1em}\bar{}\hspace*{0.08em}}
+\newcommand\rd{\mathrm{d}}
 \DeclareMathOperator{\tr}{\mathrm{tr}}
 
 %----------------------------------------------------------------------------------------
@@ -150,6 +158,12 @@
 \input{./Chaps/Chap1}
 \input{./Chaps/Chap2}
 \input{./Chaps/Chap3}
+\input{./Chaps/Chap4}
+\input{./Chaps/Chap5}
+\input{./Chaps/Chap6}
+\input{./Chaps/Chap7}
+%\input{./Chaps/Chap8}
+
 
 %\begin{table}[h]
 %\centering
